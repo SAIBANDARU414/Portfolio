@@ -1,0 +1,1571 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bandaru Jnana Siva Sai Ganeswar — AI Engineer &amp; System Architect</title>
+    <meta name="description" content="Portfolio of Bandaru Jnana Siva Sai Ganeswar — AI Engineer specializing in Generative AI, LLM & Agentic Systems, FastAPI microservices, and automated document intelligence.">
+
+    <!-- Fonts: Plus Jakarta Sans & Space Grotesk -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['"Space Grotesk"', 'sans-serif'],
+                    },
+                    colors: {
+                        editorial: {
+                            bg: '#fafbfc',
+                            dark: '#0a0d14',
+                            card: '#ffffff',
+                            lime: '#b8f022',
+                            limeHover: '#a6de15',
+                            border: '#e7ecf2',
+                            muted: '#5b6982',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #fafbfc;
+            color: #0f172a;
+            overflow-x: hidden;
+        }
+
+        /* Subtle Karvynox-style Architectural Background Grid */
+        .bg-grid-pattern {
+            background-size: 38px 38px;
+            background-image: 
+                linear-gradient(to right, rgba(148, 163, 184, 0.08) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+            mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, #000 65%, transparent 100%);
+            -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, #000 65%, transparent 100%);
+        }
+
+        /* Soft Animated Ambient Aura Blobs */
+        .ambient-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(110px);
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.6;
+        }
+
+        /* Clean Static Cards (Stable, No 3D Tilt) */
+        .kx-card {
+            background: #ffffff;
+            border: 1px solid #e7ecf3;
+            border-radius: 1.75rem;
+            box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.03), 0 2px 6px -1px rgba(15, 23, 42, 0.02);
+            transition: box-shadow 0.3s ease, border-color 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .kx-card:hover {
+            border-color: #cbd5e1;
+            box-shadow: 0 12px 28px -6px rgba(15, 23, 42, 0.08);
+        }
+
+        /* Flowing Dotted Wave Path (Static, Clean) */
+        .dashed-wave {
+            stroke-dasharray: 8, 8;
+        }
+        .dashed-wave-rev {
+            stroke-dasharray: 6, 6;
+        }
+
+        /* Spinning Circular Badge */
+        .spinning-badge text {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 2.2px;
+            fill: #0f172a;
+            text-transform: uppercase;
+        }
+
+        /* Pill Badge Styles */
+        .kx-pill {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.35rem 0.85rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            background: #f1f5f9;
+            color: #334155;
+            border: 1px solid #e2e8f0;
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .kx-pill:hover {
+            background: #e2e8f0;
+            color: #0f172a;
+            transform: translateY(-2px);
+        }
+
+        .kx-lime-pill {
+            background: #f4fdcf;
+            color: #3f6212;
+            border: 1px solid #d9f99d;
+        }
+
+        /* Clean Navbar Blur */
+        .navbar-blur {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+        }
+
+        /* Scroll Reveal Utility Classes */
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(32px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-on-scroll.is-revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Shimmering Button Hover Effect */
+        .btn-shimmer {
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-shimmer::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: 0.5s;
+        }
+        .btn-shimmer:hover::after {
+            left: 100%;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #fafbfc;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+
+        /* Welcome Portal Backdrop & Smooth Dismissal */
+        .portal-backdrop {
+            background: radial-gradient(circle at 50% 25%, rgba(244, 253, 207, 0.6) 0%, rgba(255, 255, 255, 0.9) 45%, rgba(241, 245, 249, 0.98) 100%);
+            backdrop-filter: blur(28px);
+            -webkit-backdrop-filter: blur(28px);
+        }
+        .portal-exit {
+            opacity: 0 !important;
+            transform: scale(0.96) translateY(-24px) !important;
+            pointer-events: none !important;
+            transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        }
+    </style>
+</head>
+<body class="relative min-h-screen selection:bg-[#b8f022] selection:text-black">
+
+    <!-- Welcome Portfolio Gate Overlay Card -->
+    <div id="welcome-portal" class="fixed inset-0 z-[120] flex items-center justify-center p-4 sm:p-6 overflow-y-auto portal-backdrop transition-all duration-500">
+        <!-- Ambient Decorative Glows inside Portal (Static, Elegant) -->
+        <div class="ambient-orb w-[30rem] h-[30rem] bg-[#dcfce7] top-[8%] left-[12%]"></div>
+        <div class="ambient-orb w-[28rem] h-[28rem] bg-[#fef9c3] bottom-[8%] right-[12%]"></div>
+
+        <!-- Central Welcome Card (Clean, Minimal & Focused) -->
+        <div class="kx-card max-w-lg w-full p-8 sm:p-12 bg-white border border-slate-200 shadow-2xl relative my-auto z-10 text-center">
+            
+            <!-- Monogram Avatar -->
+            <div class="mx-auto w-20 h-20 rounded-3xl bg-black text-white flex items-center justify-center font-display font-extrabold text-3xl shadow-lg ring-4 ring-[#b8f022]/40 mb-6">
+                G
+            </div>
+
+            <!-- Welcome Heading -->
+            <div class="space-y-2 mb-8">
+                <p class="text-xs font-mono font-bold tracking-widest uppercase text-slate-400">
+                    Portfolio Experience
+                </p>
+                <h2 class="text-2xl sm:text-3xl font-extrabold font-display text-slate-950 tracking-tight">
+                    Welcome to My Portfolio
+                </h2>
+                <p class="text-sm font-semibold text-slate-600">
+                    Bandaru Jnana Siva Sai Ganeswar &bull; AI Engineer
+                </p>
+            </div>
+
+            <!-- Action Buttons: Enter Portfolio & Review My Resume -->
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5">
+                <!-- Enter Button -->
+                <button onclick="enterPortfolio()" id="btn-enter-portfolio" class="btn-shimmer flex-1 py-4 px-6 rounded-2xl font-bold text-sm sm:text-base bg-black hover:bg-slate-800 text-white flex items-center justify-center space-x-2.5 shadow-md hover:shadow-xl transition-all cursor-pointer">
+                    <span>Enter Portfolio</span>
+                    <i class="fas fa-arrow-right text-xs"></i>
+                </button>
+
+                <!-- Review Resume Button -->
+                <button onclick="openResumeModal()" id="btn-review-resume-welcome" class="btn-shimmer flex-1 py-4 px-6 rounded-2xl font-bold text-sm sm:text-base bg-[#b8f022] hover:bg-[#a6de15] text-black flex items-center justify-center space-x-2.5 shadow-md hover:shadow-lg transition-all cursor-pointer">
+                    <i class="fas fa-file-invoice text-base"></i>
+                    <span>Review My Resume</span>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Subtle Architectural Background Grid Overlay (Karvynox style) -->
+    <div class="fixed inset-0 bg-grid-pattern pointer-events-none z-0"></div>
+
+    <!-- Soft Ambient Pastel Orbs (Static & Calming) -->
+    <div class="ambient-orb w-[42rem] h-[42rem] bg-[#dcfce7] top-[-5rem] left-[-8rem]"></div>
+    <div class="ambient-orb w-[38rem] h-[38rem] bg-[#fef9c3] top-[18rem] right-[-10rem]"></div>
+    <div class="ambient-orb w-[46rem] h-[46rem] bg-[#e0e7ff] top-[65rem] left-[10%]"></div>
+    <div class="ambient-orb w-[36rem] h-[36rem] bg-[#fce7f3] top-[115rem] right-[5%]"></div>
+    <div class="ambient-orb w-[40rem] h-[40rem] bg-[#ccfbf1] top-[165rem] left-[20%]"></div>
+
+    <!-- Dual Flowing Soft SVG Dotted Curves (Static) -->
+    <div class="absolute top-44 left-0 w-full overflow-hidden pointer-events-none z-0 opacity-40">
+        <svg viewBox="0 0 1440 340" fill="none" class="w-full h-auto">
+            <path class="dashed-wave" d="M-100,180 C280,320 480,40 850,210 C1200,360 1350,80 1540,160" stroke="#94a3b8" stroke-width="1.75"/>
+            <path class="dashed-wave-rev" d="M-50,260 C320,100 600,310 980,120 C1280,240 1400,140 1540,280" stroke="#cbd5e1" stroke-width="1.5"/>
+        </svg>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header class="fixed top-0 left-0 right-0 z-50 navbar-blur">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#hero" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 rounded-2xl bg-black text-white flex items-center justify-center font-display font-bold text-base shadow-sm group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                    G
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-display font-bold text-base tracking-tight text-slate-900 group-hover:text-black transition-colors">Sai Ganeswar</span>
+                    <span class="text-[11px] font-medium text-slate-500">AI Engineer &bull; Unnanu AI</span>
+                </div>
+            </a>
+
+            <!-- Nav Links -->
+            <nav class="hidden md:flex items-center space-x-1 bg-slate-100/80 p-1.5 rounded-full border border-slate-200/80 text-xs font-semibold text-slate-600">
+                <a href="#overview" class="px-4 py-2 rounded-full hover:text-black hover:bg-white hover:shadow-sm transition-all duration-200">Overview</a>
+                <a href="#systems" class="px-4 py-2 rounded-full hover:text-black hover:bg-white hover:shadow-sm transition-all duration-200">Production Work</a>
+                <a href="#experience" class="px-4 py-2 rounded-full hover:text-black hover:bg-white hover:shadow-sm transition-all duration-200">Experience</a>
+                <a href="#skills" class="px-4 py-2 rounded-full hover:text-black hover:bg-white hover:shadow-sm transition-all duration-200">Expertise</a>
+                <a href="#education" class="px-4 py-2 rounded-full hover:text-black hover:bg-white hover:shadow-sm transition-all duration-200">Education</a>
+            </nav>
+
+            <!-- Status & CTA -->
+            <div class="flex items-center space-x-2 sm:space-x-3">
+                <div class="hidden xl:flex items-center space-x-2 px-3 py-1.5 rounded-full bg-[#f4fdcf] border border-[#d9f99d] text-[#3f6212] text-xs font-semibold">
+                    <span class="w-2 h-2 rounded-full bg-[#65a30d] animate-pulse"></span>
+                    <span>Notice Period &bull; Immediate</span>
+                </div>
+                <button onclick="openWelcomePortal()" class="hidden md:flex items-center space-x-1.5 px-3 py-2 rounded-full text-xs font-semibold text-slate-500 hover:text-black hover:bg-slate-100 transition-all cursor-pointer" title="Reopen Welcome Card">
+                    <i class="fas fa-sparkles text-amber-500 text-xs"></i>
+                    <span>Welcome</span>
+                </button>
+                <button onclick="openResumeModal()" class="px-3.5 py-2 rounded-full text-xs font-bold text-slate-800 bg-white hover:bg-slate-50 border border-slate-200 shadow-xs hover:border-slate-300 hover:scale-105 transition-all flex items-center space-x-1.5 cursor-pointer" title="Review Resume PDF">
+                    <i class="fas fa-file-invoice text-slate-700 text-xs"></i>
+                    <span>Review Resume</span>
+                </button>
+                <button onclick="openConnectModal()" class="btn-shimmer px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs md:text-sm font-bold text-black bg-[#b8f022] hover:bg-[#a6de15] transition-all shadow-sm hover:shadow-md hover:scale-105 flex items-center space-x-2 cursor-pointer">
+                    <span>Let's Connect</span>
+                    <i class="fas fa-paper-plane text-xs transition-transform group-hover:translate-x-1"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="relative z-10 pt-36 pb-24 px-6 max-w-7xl mx-auto">
+
+        <!-- Hero Section with Animated Word Cycler & Karvynox Editorial Flow -->
+        <section id="hero" class="pt-6 pb-16 relative reveal-on-scroll">
+            <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-12">
+                
+                <div class="lg:w-8/12 space-y-7">
+                    <!-- Notice Period Pill -->
+                    <div class="inline-flex items-center space-x-2.5 px-4 py-1.5 rounded-full bg-white border border-slate-200 shadow-sm text-xs font-semibold text-slate-700 hover:border-slate-300 transition-all hover:scale-105">
+                        <span class="w-2.5 h-2.5 rounded-full bg-[#84cc16] inline-block animate-pulse"></span>
+                        <span>Serving Notice Period &bull; Open for AI &amp; Agentic Roles</span>
+                    </div>
+
+                    <!-- Bold Editorial Headline with Dynamic Animated Rotating Word -->
+                    <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold font-display tracking-tight text-slate-950 leading-[1.08]">
+                        Building AI systems that <br>
+                        <span class="relative inline-block mt-1">
+                            <span id="dynamic-hero-word" class="relative z-10 px-3 py-0.5 rounded-2xl bg-[#f4fdcf] text-[#3f6212] transition-all duration-500 inline-block">actually ship</span>
+                            <!-- Karvynox style playful underline swoosh -->
+                            <svg viewBox="0 0 280 24" fill="none" class="absolute -bottom-2 left-0 w-full h-auto text-[#b8f022] -z-0">
+                                <path d="M4 14C70 4 190 2 276 12C210 16 90 20 4 16" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
+                            </svg>
+                        </span>
+                        to production.
+                    </h1>
+
+                    <!-- Clean Professional Subtitle -->
+                    <p class="text-slate-600 text-lg sm:text-xl font-normal leading-relaxed max-w-2xl">
+                        I am an <strong class="text-slate-900 font-semibold">AI Engineer</strong> with 1 year of production experience building LLM-powered agent pipelines, automated document intelligence platforms, hybrid RAG candidate matching, and enterprise FastAPI microservices.
+                    </p>
+
+                    <!-- Location and direct links -->
+                    <div class="flex flex-wrap items-center gap-6 text-sm text-slate-500 font-medium pt-1">
+                        <span class="flex items-center space-x-2">
+                            <i class="fas fa-location-dot text-slate-400"></i>
+                            <span>Hyderabad / Andhra Pradesh, India</span>
+                        </span>
+                        <span>&bull;</span>
+                        <span class="flex items-center space-x-2">
+                            <i class="fas fa-phone text-slate-400"></i>
+                            <span>+91-8463990472</span>
+                        </span>
+                        <span>&bull;</span>
+                        <button onclick="openConnectModal()" class="text-slate-700 hover:text-black underline decoration-slate-300 underline-offset-4 cursor-pointer">
+                            bandarujnanasivasaiganeswar@gmail.com
+                        </button>
+                    </div>
+
+                    <!-- Primary Action Buttons -->
+                    <div class="flex flex-wrap items-center gap-3.5 pt-4">
+                        <button onclick="openResumeModal()" class="btn-shimmer px-7 py-4 rounded-2xl font-bold text-sm bg-[#b8f022] hover:bg-[#a6de15] text-black shadow-md hover:shadow-xl hover:-translate-y-1 transition-all flex items-center space-x-2.5 cursor-pointer">
+                            <i class="fas fa-file-invoice text-base"></i>
+                            <span>Review Resume</span>
+                        </button>
+                        <a href="#systems" class="btn-shimmer px-6 py-4 rounded-2xl font-bold text-sm bg-black hover:bg-slate-800 text-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all flex items-center space-x-3">
+                            <span>Explore Production Work</span>
+                            <i class="fas fa-arrow-down text-xs animate-bounce"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/bandaru-jnana-siva-saiganeswar" target="_blank" rel="noopener noreferrer" class="px-5 py-4 rounded-2xl font-bold text-sm bg-white hover:bg-slate-50 text-slate-800 border border-slate-200 shadow-sm hover:border-slate-300 hover:-translate-y-1 transition-all flex items-center space-x-2.5">
+                            <i class="fab fa-linkedin text-blue-600 text-base"></i>
+                            <span>LinkedIn Profile</span>
+                        </a>
+                        <button onclick="navigator.clipboard.writeText('bandarujnanasivasaiganeswar@gmail.com'); alert('Email address copied to clipboard!');" class="px-5 py-4 rounded-2xl font-semibold text-sm bg-slate-100 hover:bg-slate-200 text-slate-700 hover:-translate-y-1 transition-all flex items-center space-x-2 cursor-pointer" title="Copy Email">
+                            <i class="fas fa-copy text-slate-500"></i>
+                            <span>Copy Email</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Hero Feature: Spinning Badge + Summary Card -->
+                <div class="lg:w-4/12 w-full flex flex-col items-center lg:items-end justify-center relative">
+                    
+                    <!-- Clean Circular Badge (Static, Professional) -->
+                    <div class="relative w-36 h-36 mb-6">
+                        <div class="absolute inset-0 spinning-badge">
+                            <svg viewBox="0 0 120 120" class="w-full h-full">
+                                <path id="badgePath" d="M 60, 60 m -45, 0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0" fill="none"/>
+                                <text>
+                                    <textPath href="#badgePath" startOffset="0%">
+                                        &bull; PRODUCTION AI &bull; AGENTIC SYSTEMS &bull;
+                                    </textPath>
+                                </text>
+                            </svg>
+                        </div>
+                        <div class="absolute inset-4 rounded-full bg-[#b8f022] flex items-center justify-center shadow-md hover:scale-110 transition-transform cursor-pointer">
+                            <i class="fas fa-bolt text-2xl text-black"></i>
+                        </div>
+                    </div>
+
+                    <!-- Soft Editorial Callout Card with Tilt Effect -->
+                    <div class="kx-card p-6 w-full max-w-sm space-y-4">
+                        <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+                            <span class="text-xs font-mono font-bold uppercase tracking-wider text-slate-400">Current Role</span>
+                            <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-[#f4fdcf] text-[#3f6212]">Notice Period</span>
+                        </div>
+                        <div>
+                            <h3 class="font-display font-bold text-lg text-slate-900">AI Engineer</h3>
+                            <p class="text-xs font-semibold text-slate-500 mt-0.5">Unnanu AI Technologies &bull; Hyderabad</p>
+                        </div>
+                        <div class="space-y-2 text-xs text-slate-600">
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-check text-emerald-600"></i>
+                                <span>8-stage CrewAI agent pipelines</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-check text-emerald-600"></i>
+                                <span>Multi-hour workflows to &lt; 60 seconds</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-check text-emerald-600"></i>
+                                <span>Azure Cognitive Search + Hybrid RAG</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Curated Core Production Systems Badge Strip (Clean, Professional & Static) -->
+        <section class="py-5 border-y border-slate-200/80 bg-white/70 backdrop-blur-sm -mx-6 px-6 my-10">
+            <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-xs font-mono font-bold uppercase text-slate-700">
+                <span class="px-3.5 py-1.5 rounded-full bg-slate-100 border border-slate-200/90">⚡ 8-Stage CrewAI Pipelines</span>
+                <span class="px-3.5 py-1.5 rounded-full bg-slate-100 border border-slate-200/90">⚡ FastAPI Microservices</span>
+                <span class="px-3.5 py-1.5 rounded-full bg-slate-100 border border-slate-200/90">⚡ Hybrid RAG &amp; BM25</span>
+                <span class="px-3.5 py-1.5 rounded-full bg-slate-100 border border-slate-200/90">⚡ n8n AI Automations</span>
+                <span class="px-3.5 py-1.5 rounded-full bg-slate-100 border border-slate-200/90">⚡ Azure SQL &amp; Drizzle ORM</span>
+                <span class="px-3.5 py-1.5 rounded-full bg-slate-100 border border-slate-200/90">⚡ Docker &amp; CI/CD</span>
+                <span class="px-3.5 py-1.5 rounded-full bg-slate-100 border border-slate-200/90">⚡ 60+ REST Endpoints</span>
+            </div>
+        </section>
+
+        <!-- Metrics Strip with Animated Numbers (Scroll Triggered) -->
+        <section id="overview" class="py-12 reveal-on-scroll">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+                
+                <div class="kx-card p-6 text-center group">
+                    <div class="text-3xl lg:text-4xl font-extrabold font-display text-slate-900 mb-1 group-hover:text-emerald-600 transition-colors">
+                        &lt; <span class="counter-val" data-target="1">0</span> min
+                    </div>
+                    <div class="text-xs font-bold text-slate-700">Sub-Minute Ingestion</div>
+                    <div class="text-[11px] text-slate-500 mt-0.5">Down from multi-hour manual workflows</div>
+                </div>
+
+                <div class="kx-card p-6 text-center group">
+                    <div class="text-3xl lg:text-4xl font-extrabold font-display text-slate-900 mb-1 group-hover:text-indigo-600 transition-colors">
+                        <span class="counter-val" data-target="8">0</span>-Stage
+                    </div>
+                    <div class="text-xs font-bold text-slate-700">CrewAI Agent Pipeline</div>
+                    <div class="text-[11px] text-slate-500 mt-0.5">Groq LLM structured data extraction</div>
+                </div>
+
+                <div class="kx-card p-6 text-center group">
+                    <div class="text-3xl lg:text-4xl font-extrabold font-display text-slate-900 mb-1 group-hover:text-purple-600 transition-colors">
+                        <span class="counter-val" data-target="9">0</span> Workflows
+                    </div>
+                    <div class="text-xs font-bold text-slate-700">n8n AI Automations</div>
+                    <div class="text-[11px] text-slate-500 mt-0.5">Slack, Drive, Fireflies, Zoho Recruit</div>
+                </div>
+
+                <div class="kx-card p-6 text-center group">
+                    <div class="text-3xl lg:text-4xl font-extrabold font-display text-slate-900 mb-1 group-hover:text-cyan-600 transition-colors">
+                        <span class="counter-val" data-target="60">0</span>+ APIs
+                    </div>
+                    <div class="text-xs font-bold text-slate-700">REST &amp; Microservices</div>
+                    <div class="text-[11px] text-slate-500 mt-0.5">OAuth2, Azure SQL, Drizzle ORM</div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Production Systems Section (Editorial Showcase) -->
+        <section id="systems" class="py-16 reveal-on-scroll">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+                <div>
+                    <span class="text-xs font-mono font-bold uppercase tracking-widest text-slate-400 block mb-2">Production Implementations</span>
+                    <h2 class="text-3xl sm:text-5xl font-extrabold font-display text-slate-950 tracking-tight">
+                        Engineered for High-Scale Enterprise
+                    </h2>
+                </div>
+                <p class="text-slate-600 text-sm max-w-md font-normal leading-relaxed">
+                    Seven core production systems built, deployed, and scaled at Unnanu AI Technologies India Pvt Ltd.
+                </p>
+            </div>
+
+            <!-- Category Filter Tabs with Smooth Animation -->
+            <div class="flex flex-wrap gap-2.5 mb-10">
+                <button onclick="filterSystems('all')" class="system-filter-btn px-4 py-2 rounded-full text-xs font-bold bg-black text-white shadow-sm hover:scale-105 transition-all" data-category="all">All Systems (7)</button>
+                <button onclick="filterSystems('agents')" class="system-filter-btn px-4 py-2 rounded-full text-xs font-bold bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 hover:scale-105 transition-all" data-category="agents">LLM &amp; Agents (3)</button>
+                <button onclick="filterSystems('backend')" class="system-filter-btn px-4 py-2 rounded-full text-xs font-bold bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 hover:scale-105 transition-all" data-category="backend">Backend &amp; Microservices (2)</button>
+                <button onclick="filterSystems('automation')" class="system-filter-btn px-4 py-2 rounded-full text-xs font-bold bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 hover:scale-105 transition-all" data-category="automation">n8n &amp; Extensions (2)</button>
+            </div>
+
+            <!-- Systems Grid with Staggered 3D Tilt Cards -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-7" id="systems-container">
+                
+                <!-- System 1: Document Intelligence Platform -->
+                <div class="system-card kx-card p-8 flex flex-col justify-between" data-category="agents">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="kx-lime-pill font-mono text-[11px]">CrewAI + Groq</span>
+                            <span class="text-xs font-medium text-slate-400">Document Intelligence</span>
+                        </div>
+                        <h3 class="text-xl font-bold font-display text-slate-950">AI-Powered Job Posting &amp; Document Extraction</h3>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                            FastAPI-based AI service that automates DOCX/PDF job-document ingestion, extraction, formatting, and job-board publishing. Built an 8-stage CrewAI + Groq LLM agent pipeline to extract structured job metadata from unstructured documents.
+                        </p>
+                        <div class="p-3.5 bg-slate-50 rounded-2xl border border-slate-100 text-xs space-y-1">
+                            <span class="font-bold text-slate-900 block">Workflow Impact:</span>
+                            <span class="text-slate-600">Reduced a multi-hour manual recruitment workflow to a sub-minute API-driven process deployed on Azure.</span>
+                        </div>
+                    </div>
+                    <div class="pt-5 mt-6 border-t border-slate-100 flex flex-wrap gap-1.5">
+                        <span class="kx-pill">FastAPI</span>
+                        <span class="kx-pill">CrewAI</span>
+                        <span class="kx-pill">Groq LLM</span>
+                        <span class="kx-pill">Azure Blob</span>
+                        <span class="kx-pill">Docker</span>
+                    </div>
+                </div>
+
+                <!-- System 2: Resume Chatbot AI Matchmaking -->
+                <div class="system-card kx-card p-8 flex flex-col justify-between" data-category="agents">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="kx-pill font-mono text-[11px] bg-sky-50 text-sky-800 border-sky-200">Hybrid RAG</span>
+                            <span class="text-xs font-medium text-slate-400">Unnanu Hire ATS</span>
+                        </div>
+                        <h3 class="text-xl font-bold font-display text-slate-950">Resume Chatbot &amp; Candidate Matching</h3>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                            Production FastAPI microservice powering a conversational candidate-matching chatbot for Unnanu Hire ATS. Designed a hybrid RAG pipeline combining structured column-routed retrieval with Azure Cognitive Search using BM25 and CrossEncoder re-ranking.
+                        </p>
+                        <div class="p-3.5 bg-slate-50 rounded-2xl border border-slate-100 text-xs space-y-1">
+                            <span class="font-bold text-slate-900 block">Reliability &amp; Session:</span>
+                            <span class="text-slate-600">Multi-process SQLite session handling, defensive fallback data processing for high availability.</span>
+                        </div>
+                    </div>
+                    <div class="pt-5 mt-6 border-t border-slate-100 flex flex-wrap gap-1.5">
+                        <span class="kx-pill">Azure Cognitive Search</span>
+                        <span class="kx-pill">BM25</span>
+                        <span class="kx-pill">CrossEncoder</span>
+                        <span class="kx-pill">SQLite</span>
+                        <span class="kx-pill">FastAPI</span>
+                    </div>
+                </div>
+
+                <!-- System 3: AI-Powered DNS Security Agent -->
+                <div class="system-card kx-card p-8 flex flex-col justify-between" data-category="agents">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="kx-pill font-mono text-[11px] bg-purple-50 text-purple-800 border-purple-200">Google Gemini</span>
+                            <span class="text-xs font-medium text-slate-400">Compliance &amp; Sec</span>
+                        </div>
+                        <h3 class="text-xl font-bold font-display text-slate-950">AI-Powered DNS Security &amp; Compliance Agent</h3>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                            Developed an AI-powered agent for DNS security, domain validation, SSL/TLS monitoring, and compliance reporting. Automated validation of 10+ DNS record types and integrated GoDaddy APIs with Google Gemini for configuration analysis.
+                        </p>
+                        <div class="p-3.5 bg-slate-50 rounded-2xl border border-slate-100 text-xs space-y-1">
+                            <span class="font-bold text-slate-900 block">Automated Reporting:</span>
+                            <span class="text-slate-600">Automated security report generation with Playwright screenshots and scheduled cron execution via APScheduler.</span>
+                        </div>
+                    </div>
+                    <div class="pt-5 mt-6 border-t border-slate-100 flex flex-wrap gap-1.5">
+                        <span class="kx-pill">Google Gemini</span>
+                        <span class="kx-pill">Playwright</span>
+                        <span class="kx-pill">APScheduler</span>
+                        <span class="kx-pill">GoDaddy API</span>
+                        <span class="kx-pill">dnspython</span>
+                    </div>
+                </div>
+
+                <!-- System 4: Full-Stack AI Job Marketplace -->
+                <div class="system-card kx-card p-8 flex flex-col justify-between" data-category="backend">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="kx-pill font-mono text-[11px] bg-emerald-50 text-emerald-800 border-emerald-200">60+ REST APIs</span>
+                            <span class="text-xs font-medium text-slate-400">Job Portal</span>
+                        </div>
+                        <h3 class="text-xl font-bold font-display text-slate-950">Full-Stack AI Job Marketplace</h3>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                            Production job marketplace featuring employer portals, resume parsing, auth, and recruiter matching. Built PDF/DOCX skill-extraction pipelines with Azure SQL and Drizzle ORM.
+                        </p>
+                        <div class="p-3.5 bg-slate-50 rounded-2xl border border-slate-100 text-xs space-y-1">
+                            <span class="font-bold text-slate-900 block">Security &amp; Testing:</span>
+                            <span class="text-slate-600">Google &amp; LinkedIn OAuth2, OTP verification, Azure Blob Storage, and Playwright end-to-end testing.</span>
+                        </div>
+                    </div>
+                    <div class="pt-5 mt-6 border-t border-slate-100 flex flex-wrap gap-1.5">
+                        <span class="kx-pill">Azure SQL</span>
+                        <span class="kx-pill">Drizzle ORM</span>
+                        <span class="kx-pill">OAuth 2.0</span>
+                        <span class="kx-pill">Playwright</span>
+                        <span class="kx-pill">CI/CD</span>
+                    </div>
+                </div>
+
+                <!-- System 5: AI Workflow Automation with n8n -->
+                <div class="system-card kx-card p-8 flex flex-col justify-between" data-category="automation">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="kx-pill font-mono text-[11px] bg-amber-50 text-amber-800 border-amber-200">n8n Orchestration</span>
+                            <span class="text-xs font-medium text-slate-400">9 AI Workflows</span>
+                        </div>
+                        <h3 class="text-xl font-bold font-display text-slate-950">Multi-Platform AI Workflow Automation</h3>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                            Designed and deployed 9 production AI workflows integrating LinkedIn, Facebook, Slack, Google Drive, Zoho Recruit, ZipRecruiter, Fireflies.ai, and Google Gemini.
+                        </p>
+                        <div class="p-3.5 bg-slate-50 rounded-2xl border border-slate-100 text-xs space-y-1">
+                            <span class="font-bold text-slate-900 block">Audio &amp; Meeting Sync:</span>
+                            <span class="text-slate-600">Fireflies-to-Google Drive automation for transcript retrieval, audio processing, archival, and deduplication.</span>
+                        </div>
+                    </div>
+                    <div class="pt-5 mt-6 border-t border-slate-100 flex flex-wrap gap-1.5">
+                        <span class="kx-pill">n8n</span>
+                        <span class="kx-pill">Fireflies.ai</span>
+                        <span class="kx-pill">Google Drive API</span>
+                        <span class="kx-pill">Zoho Recruit</span>
+                        <span class="kx-pill">Slack Webhooks</span>
+                    </div>
+                </div>
+
+                <!-- System 6: LinkedIn AI Sourcing Extension -->
+                <div class="system-card kx-card p-8 flex flex-col justify-between" data-category="automation">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="kx-pill font-mono text-[11px] bg-blue-50 text-blue-800 border-blue-200">Manifest V3</span>
+                            <span class="text-xs font-medium text-slate-400">Chrome Extension</span>
+                        </div>
+                        <h3 class="text-xl font-bold font-display text-slate-950">LinkedIn AI Sourcing Extension</h3>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                            Developed a Manifest V3 Chrome extension for extracting structured candidate profile data and transferring candidate details seamlessly to the internal recruitment CRM.
+                        </p>
+                        <div class="p-3.5 bg-slate-50 rounded-2xl border border-slate-100 text-xs space-y-1">
+                            <span class="font-bold text-slate-900 block">Architecture:</span>
+                            <span class="text-slate-600">Normalized candidate schemas, resilient DOM extraction selectors, and REST API synchronization.</span>
+                        </div>
+                    </div>
+                    <div class="pt-5 mt-6 border-t border-slate-100 flex flex-wrap gap-1.5">
+                        <span class="kx-pill">JavaScript</span>
+                        <span class="kx-pill">Chrome Extensions</span>
+                        <span class="kx-pill">DOM Extraction</span>
+                        <span class="kx-pill">REST APIs</span>
+                    </div>
+                </div>
+
+                <!-- System 7: Slack-Native Recruiting Application -->
+                <div class="system-card kx-card p-8 flex flex-col justify-between" data-category="backend">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="kx-pill font-mono text-[11px] bg-teal-50 text-teal-800 border-teal-200">Slack Bolt SDK</span>
+                            <span class="text-xs font-medium text-slate-400">Enterprise Apps</span>
+                        </div>
+                        <h3 class="text-xl font-bold font-display text-slate-950">Slack-Native Recruiting Application</h3>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                            Recruiting workflows built with Node.js, Express, Slack Bolt SDK, and Slack Web API. Built slash commands, interactive modals, OAuth 2.0 workspace installation, and resume upload workflows.
+                        </p>
+                        <div class="p-3.5 bg-slate-50 rounded-2xl border border-slate-100 text-xs space-y-1">
+                            <span class="font-bold text-slate-900 block">Deployment:</span>
+                            <span class="text-slate-600">Deployed on Azure App Service with automated Jest &amp; JSDOM unit and integration testing.</span>
+                        </div>
+                    </div>
+                    <div class="pt-5 mt-6 border-t border-slate-100 flex flex-wrap gap-1.5">
+                        <span class="kx-pill">Node.js</span>
+                        <span class="kx-pill">Express</span>
+                        <span class="kx-pill">Slack Bolt</span>
+                        <span class="kx-pill">Azure App Service</span>
+                        <span class="kx-pill">Jest</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Machine Learning Project: Driver Drowsiness Detection -->
+        <section class="py-12 reveal-on-scroll">
+            <div class="kx-card p-8 sm:p-10 border border-slate-200">
+                <div class="flex flex-col lg:flex-row gap-8 items-start justify-between">
+                    <div class="lg:w-8/12 space-y-4">
+                        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-purple-50 text-purple-700 border border-purple-200 text-xs font-semibold">
+                            <i class="fas fa-eye animate-pulse"></i>
+                            <span>Computer Vision &amp; Deep Learning Project</span>
+                        </div>
+                        <h3 class="text-2xl sm:text-3xl font-bold font-display text-slate-950">Driver Drowsiness Detection System</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Developed a real-time computer vision and machine learning system for detecting driver drowsiness using facial landmark detection and Eye Aspect Ratio (EAR) analysis to identify fatigue indicators. Integrated an immediate audio alert mechanism for real-time driver warnings, achieving a verified <span class="font-bold text-slate-900 bg-[#f4fdcf] px-2 py-0.5 rounded">20% improvement in driver safety</span> during testing scenarios.
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="kx-pill">OpenCV</span>
+                            <span class="kx-pill">Facial Landmarks</span>
+                            <span class="kx-pill">Eye Aspect Ratio (EAR)</span>
+                            <span class="kx-pill">Python</span>
+                            <span class="kx-pill">Machine Learning</span>
+                        </div>
+                    </div>
+
+                    <div class="lg:w-4/12 w-full bg-slate-50 p-6 rounded-2xl border border-slate-200 text-xs space-y-3">
+                        <div class="font-display font-bold text-slate-900 text-sm flex items-center justify-between border-b border-slate-200 pb-2">
+                            <span>ALGORITHM BENCHMARK</span>
+                            <i class="fas fa-chart-line text-emerald-600 animate-bounce"></i>
+                        </div>
+                        <div class="flex justify-between text-slate-600">
+                            <span>Eye Aspect Ratio Threshold:</span>
+                            <span class="font-bold text-slate-900">0.25</span>
+                        </div>
+                        <div class="flex justify-between text-slate-600">
+                            <span>Real-Time Inference:</span>
+                            <span class="font-bold text-slate-900">20 fps</span>
+                        </div>
+                        <div class="flex justify-between text-slate-600">
+                            <span>Safety Metric:</span>
+                            <span class="font-bold text-emerald-700 bg-emerald-100 px-1.5 py-0.5 rounded">+20% Verified</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Experience & Internships -->
+        <section id="experience" class="py-16 reveal-on-scroll">
+            <div class="mb-12">
+                <span class="text-xs font-mono font-bold uppercase tracking-widest text-slate-400 block mb-2">Track Record</span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold font-display text-slate-950 tracking-tight">
+                    Professional Experience &amp; Internships
+                </h2>
+            </div>
+
+            <div class="space-y-8">
+                <!-- Current Full-time Role -->
+                <div class="kx-card p-8 sm:p-10 border-l-4 border-l-black relative">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-6 border-b border-slate-100 pb-5">
+                        <div>
+                            <div class="flex items-center space-x-3">
+                                <h3 class="text-2xl font-bold font-display text-slate-950">AI Engineer</h3>
+                                <span class="kx-lime-pill font-mono text-[11px]">Notice Period Active</span>
+                            </div>
+                            <p class="text-slate-600 font-semibold text-sm mt-1">
+                                Unnanu AI Technologies India Pvt Ltd &bull; <span class="font-normal text-slate-500">Hyderabad, Telangana</span>
+                            </p>
+                        </div>
+                        <div class="text-xs font-semibold text-slate-500 bg-slate-100 px-4 py-2 rounded-full self-start md:self-auto">
+                            1 Year Professional Tenure
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6 text-sm text-slate-600">
+                        <div class="space-y-3">
+                            <div class="flex items-start space-x-2.5">
+                                <i class="fas fa-check text-slate-900 mt-1"></i>
+                                <span>Engineered FastAPI microservices automating document ingestion, AI metadata extraction, and enterprise publishing.</span>
+                            </div>
+                            <div class="flex items-start space-x-2.5">
+                                <i class="fas fa-check text-slate-900 mt-1"></i>
+                                <span>Implemented 8-stage CrewAI agent workflows powered by Groq LLMs, reducing processing times from hours to under 60 seconds.</span>
+                            </div>
+                            <div class="flex items-start space-x-2.5">
+                                <i class="fas fa-check text-slate-900 mt-1"></i>
+                                <span>Designed hybrid RAG architecture using BM25 and CrossEncoder re-ranking over Azure Cognitive Search for Unnanu Hire ATS.</span>
+                            </div>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-start space-x-2.5">
+                                <i class="fas fa-check text-slate-900 mt-1"></i>
+                                <span>Built AI DNS Compliance Agents with Google Gemini, Playwright automated screenshot generation, and APScheduler.</span>
+                            </div>
+                            <div class="flex items-start space-x-2.5">
+                                <i class="fas fa-check text-slate-900 mt-1"></i>
+                                <span>Created Chrome Extensions (Manifest V3) and Slack Bolt apps for live candidate scraping and CRM synchronization.</span>
+                            </div>
+                            <div class="flex items-start space-x-2.5">
+                                <i class="fas fa-check text-slate-900 mt-1"></i>
+                                <span>Shipped 9 production n8n AI workflows integrating Fireflies.ai, Zoho Recruit, ZipRecruiter, and Google Drive.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Three Internships Grid -->
+                <div class="grid md:grid-cols-3 gap-6">
+                    
+                    <!-- RINL Vizag Steel -->
+                    <div class="kx-card p-7 flex flex-col justify-between">
+                        <div class="space-y-3">
+                            <span class="text-xs font-mono font-bold text-slate-400">Dec 2024 &ndash; Mar 2025</span>
+                            <h4 class="text-lg font-bold font-display text-slate-950">Project Trainee</h4>
+                            <p class="text-xs font-bold text-slate-600">RINL (Vizag Steel Plant) &bull; Visakhapatnam</p>
+                            <ul class="text-xs text-slate-600 space-y-2 pt-2">
+                                <li class="flex items-start space-x-2">
+                                    <i class="fas fa-chevron-right text-slate-400 mt-0.5"></i>
+                                    <span>Developed enterprise Java, Spring Boot, and Hibernate backend components.</span>
+                                </li>
+                                <li class="flex items-start space-x-2">
+                                    <i class="fas fa-chevron-right text-slate-400 mt-0.5"></i>
+                                    <span>Optimized database queries with advanced SQL indexing (<strong class="text-slate-900">+30% efficiency boost</strong>).</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pt-4 mt-6 border-t border-slate-100 flex flex-wrap gap-1.5">
+                            <span class="kx-pill text-[11px]">Java</span>
+                            <span class="kx-pill text-[11px]">Spring Boot</span>
+                            <span class="kx-pill text-[11px]">SQL Indexing</span>
+                        </div>
+                    </div>
+
+                    <!-- Techno Hacks -->
+                    <div class="kx-card p-7 flex flex-col justify-between">
+                        <div class="space-y-3">
+                            <span class="text-xs font-mono font-bold text-slate-400">Nov 2024 &ndash; Dec 2024</span>
+                            <h4 class="text-lg font-bold font-display text-slate-950">Web Development Intern</h4>
+                            <p class="text-xs font-bold text-slate-600">Techno Hacks</p>
+                            <ul class="text-xs text-slate-600 space-y-2 pt-2">
+                                <li class="flex items-start space-x-2">
+                                    <i class="fas fa-chevron-right text-slate-400 mt-0.5"></i>
+                                    <span>Developed responsive, dynamic web user interfaces with HTML, CSS, and modern JavaScript.</span>
+                                </li>
+                                <li class="flex items-start space-x-2">
+                                    <i class="fas fa-chevron-right text-slate-400 mt-0.5"></i>
+                                    <span>Seamlessly integrated frontend interfaces with Python backend functionality.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pt-4 mt-6 border-t border-slate-100 flex flex-wrap gap-1.5">
+                            <span class="kx-pill text-[11px]">JavaScript</span>
+                            <span class="kx-pill text-[11px]">Python APIs</span>
+                            <span class="kx-pill text-[11px]">Web UI</span>
+                        </div>
+                    </div>
+
+                    <!-- byteXL -->
+                    <div class="kx-card p-7 flex flex-col justify-between">
+                        <div class="space-y-3">
+                            <span class="text-xs font-mono font-bold text-slate-400">May 2024 &ndash; Jun 2024</span>
+                            <h4 class="text-lg font-bold font-display text-slate-950">Summer Intern</h4>
+                            <p class="text-xs font-bold text-slate-600">byteXL &bull; Vadodara, Gujarat</p>
+                            <ul class="text-xs text-slate-600 space-y-2 pt-2">
+                                <li class="flex items-start space-x-2">
+                                    <i class="fas fa-chevron-right text-slate-400 mt-0.5"></i>
+                                    <span>Completed intensive algorithms and data structures training for system design.</span>
+                                </li>
+                                <li class="flex items-start space-x-2">
+                                    <i class="fas fa-chevron-right text-slate-400 mt-0.5"></i>
+                                    <span>Developed mini full-stack projects adhering to clean code standards.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pt-4 mt-6 border-t border-slate-100 flex flex-wrap gap-1.5">
+                            <span class="kx-pill text-[11px]">DSA</span>
+                            <span class="kx-pill text-[11px]">Full-Stack</span>
+                            <span class="kx-pill text-[11px]">Best Practices</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills Matrix -->
+        <section id="skills" class="py-16 reveal-on-scroll">
+            <div class="mb-12">
+                <span class="text-xs font-mono font-bold uppercase tracking-widest text-slate-400 block mb-2">Technical Arsenal</span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold font-display text-slate-950 tracking-tight">
+                    Skills, Tools &amp; Ecosystems
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <div class="kx-card p-7 space-y-4">
+                    <h3 class="font-display font-bold text-slate-950 text-base flex items-center space-x-2">
+                        <i class="fas fa-brain text-slate-700"></i>
+                        <span>AI, LLM &amp; Multi-Agent</span>
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="kx-pill">LLM Agent Pipelines</span>
+                        <span class="kx-pill">CrewAI</span>
+                        <span class="kx-pill">Groq LLM API</span>
+                        <span class="kx-pill">Google Gemini</span>
+                        <span class="kx-pill">Prompt Engineering</span>
+                        <span class="kx-pill">Hybrid RAG</span>
+                        <span class="kx-pill">CrossEncoder &amp; BM25</span>
+                        <span class="kx-pill">Computer Vision</span>
+                        <span class="kx-pill">Machine Learning</span>
+                    </div>
+                </div>
+
+                <div class="kx-card p-7 space-y-4">
+                    <h3 class="font-display font-bold text-slate-950 text-base flex items-center space-x-2">
+                        <i class="fas fa-server text-slate-700"></i>
+                        <span>Backend &amp; Microservices</span>
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="kx-pill">FastAPI</span>
+                        <span class="kx-pill">Python</span>
+                        <span class="kx-pill">Node.js</span>
+                        <span class="kx-pill">Express</span>
+                        <span class="kx-pill">Uvicorn</span>
+                        <span class="kx-pill">Spring Boot</span>
+                        <span class="kx-pill">Hibernate</span>
+                        <span class="kx-pill">REST APIs</span>
+                        <span class="kx-pill">OAuth 2.0</span>
+                        <span class="kx-pill">Slack Bolt SDK</span>
+                    </div>
+                </div>
+
+                <div class="kx-card p-7 space-y-4">
+                    <h3 class="font-display font-bold text-slate-950 text-base flex items-center space-x-2">
+                        <i class="fas fa-cloud text-slate-700"></i>
+                        <span>Cloud &amp; DevOps</span>
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="kx-pill">Microsoft Azure</span>
+                        <span class="kx-pill">Azure Blob Storage</span>
+                        <span class="kx-pill">Azure App Service</span>
+                        <span class="kx-pill">Azure Pipelines</span>
+                        <span class="kx-pill">Docker</span>
+                        <span class="kx-pill">CI/CD Pipelines</span>
+                        <span class="kx-pill">APScheduler</span>
+                    </div>
+                </div>
+
+                <div class="kx-card p-7 space-y-4">
+                    <h3 class="font-display font-bold text-slate-950 text-base flex items-center space-x-2">
+                        <i class="fas fa-database text-slate-700"></i>
+                        <span>Data &amp; Document Engines</span>
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="kx-pill">Azure SQL</span>
+                        <span class="kx-pill">SQL Indexing</span>
+                        <span class="kx-pill">Drizzle ORM</span>
+                        <span class="kx-pill">PDF &amp; DOCX Extraction</span>
+                        <span class="kx-pill">python-docx</span>
+                        <span class="kx-pill">Mammoth</span>
+                        <span class="kx-pill">LibreOffice</span>
+                        <span class="kx-pill">Regex</span>
+                    </div>
+                </div>
+
+                <div class="kx-card p-7 space-y-4">
+                    <h3 class="font-display font-bold text-slate-950 text-base flex items-center space-x-2">
+                        <i class="fas fa-network-wired text-slate-700"></i>
+                        <span>Automation &amp; Integrations</span>
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="kx-pill">n8n Orchestration</span>
+                        <span class="kx-pill">LinkedIn API</span>
+                        <span class="kx-pill">Fireflies.ai API</span>
+                        <span class="kx-pill">Google Drive API</span>
+                        <span class="kx-pill">Slack API</span>
+                        <span class="kx-pill">Zoho Recruit API</span>
+                        <span class="kx-pill">GoDaddy API</span>
+                    </div>
+                </div>
+
+                <div class="kx-card p-7 space-y-4">
+                    <h3 class="font-display font-bold text-slate-950 text-base flex items-center space-x-2">
+                        <i class="fas fa-desktop text-slate-700"></i>
+                        <span>Frontend &amp; Testing</span>
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="kx-pill">React</span>
+                        <span class="kx-pill">TypeScript</span>
+                        <span class="kx-pill">JavaScript</span>
+                        <span class="kx-pill">Tailwind CSS</span>
+                        <span class="kx-pill">TanStack Query</span>
+                        <span class="kx-pill">Radix UI</span>
+                        <span class="kx-pill">Manifest V3</span>
+                        <span class="kx-pill">Playwright</span>
+                        <span class="kx-pill">Jest</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Education & Verified Certifications -->
+        <section id="education" class="py-16 reveal-on-scroll">
+            <div class="grid lg:grid-cols-2 gap-12">
+                
+                <!-- Education Track -->
+                <div class="space-y-6">
+                    <div>
+                        <span class="text-xs font-mono font-bold uppercase tracking-widest text-slate-400 block mb-2">Academics</span>
+                        <h2 class="text-3xl font-extrabold font-display text-slate-950">Education</h2>
+                    </div>
+
+                    <div class="kx-card p-6 border-l-4 border-l-black space-y-2">
+                        <span class="text-xs font-mono font-bold text-slate-400">Aug 2021 &ndash; May 2025</span>
+                        <h3 class="text-lg font-bold font-display text-slate-950">B.Tech in Computer Science &amp; Engineering (Artificial Intelligence)</h3>
+                        <p class="text-sm font-semibold text-slate-700">Parul University &bull; Vadodara, Gujarat</p>
+                    </div>
+
+                    <div class="kx-card p-6 border-l-4 border-l-slate-300 space-y-2">
+                        <span class="text-xs font-mono font-bold text-slate-400">Apr 2019 &ndash; Apr 2021</span>
+                        <h3 class="text-base font-bold font-display text-slate-950">Intermediate (12th)</h3>
+                        <p class="text-sm text-slate-600">Vidhyanidhi Junior College &bull; Amalapuram, AP</p>
+                    </div>
+
+                    <div class="kx-card p-6 border-l-4 border-l-slate-300 space-y-2">
+                        <span class="text-xs font-mono font-bold text-slate-400">Apr 2018 &ndash; Apr 2019</span>
+                        <h3 class="text-base font-bold font-display text-slate-950">SSC (10th)</h3>
+                        <p class="text-sm text-slate-600">Z.P.P Boys High School &bull; Amalapuram, AP</p>
+                    </div>
+                </div>
+
+                <!-- Certifications & Languages -->
+                <div class="space-y-6">
+                    <div>
+                        <span class="text-xs font-mono font-bold uppercase tracking-widest text-slate-400 block mb-2">Credentials</span>
+                        <h2 class="text-3xl font-extrabold font-display text-slate-950">Licenses &amp; Languages</h2>
+                    </div>
+
+                    <div class="kx-card p-5 flex items-center justify-between">
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">Data Science Certification</h4>
+                            <p class="text-xs text-slate-500 mt-0.5">Skill India &bull; Reliance Foundation</p>
+                        </div>
+                        <span class="kx-lime-pill text-xs">Verified</span>
+                    </div>
+
+                    <div class="kx-card p-5 flex items-center justify-between">
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">Machine Learning with Python</h4>
+                            <p class="text-xs text-slate-500 mt-0.5">Infosys Springboard</p>
+                        </div>
+                        <span class="kx-lime-pill text-xs">Verified</span>
+                    </div>
+
+                    <div class="kx-card p-5 flex items-center justify-between">
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">Networking Essentials</h4>
+                            <p class="text-xs text-slate-500 mt-0.5">Cisco</p>
+                        </div>
+                        <span class="kx-lime-pill text-xs">Verified</span>
+                    </div>
+
+                    <!-- Languages -->
+                    <div class="kx-card p-6">
+                        <span class="text-xs font-mono font-bold uppercase tracking-wider text-slate-400 block mb-4">Languages Spoken</span>
+                        <div class="grid grid-cols-3 gap-3 text-center">
+                            <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
+                                <div class="font-bold text-slate-900 text-sm">English</div>
+                                <div class="text-[11px] text-slate-500 mt-0.5">Professional</div>
+                            </div>
+                            <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
+                                <div class="font-bold text-slate-900 text-sm">Telugu</div>
+                                <div class="text-[11px] text-slate-500 mt-0.5">Native</div>
+                            </div>
+                            <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
+                                <div class="font-bold text-slate-900 text-sm">Hindi</div>
+                                <div class="text-[11px] text-slate-500 mt-0.5">Fluent</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Final CTA: Bold Karvynox Closing Card with Floating Ambient Glows -->
+        <section class="py-16 reveal-on-scroll">
+            <div class="kx-card p-10 sm:p-16 bg-black text-white text-center rounded-[2.5rem] relative overflow-hidden border-none shadow-2xl">
+                
+                <!-- Background decorative glow inside dark card -->
+                <div class="absolute -top-24 -left-24 w-72 h-72 bg-[#b8f022] opacity-20 rounded-full blur-3xl pointer-events-none animate-pulse-glow"></div>
+                <div class="absolute -bottom-24 -right-24 w-72 h-72 bg-sky-400 opacity-20 rounded-full blur-3xl pointer-events-none animate-float-soft"></div>
+
+                <div class="relative z-10 max-w-3xl mx-auto space-y-6">
+                    <span class="inline-block px-4 py-1.5 rounded-full text-xs font-mono font-bold bg-white/10 text-[#b8f022] border border-white/10">
+                        Notice Period Active &bull; Ready to Deploy Immediately
+                    </span>
+                    <h2 class="text-3xl sm:text-5xl font-extrabold font-display tracking-tight leading-tight">
+                        Ready to automate and scale your AI engineering?
+                    </h2>
+                    <p class="text-slate-400 text-base sm:text-lg max-w-xl mx-auto">
+                        Whether you are building LLM agent pipelines, automated intelligence workflows, or cloud microservices &mdash; let's talk.
+                    </p>
+                    <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
+                        <button onclick="openConnectModal()" class="btn-shimmer px-8 py-4 rounded-full font-bold text-sm bg-[#b8f022] hover:bg-[#a6de15] text-black transition-all shadow-lg hover:scale-105 flex items-center space-x-2 cursor-pointer">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Let's Connect via Email</span>
+                        </button>
+                        <a href="tel:+918463990472" class="px-7 py-4 rounded-full font-bold text-sm bg-white/10 hover:bg-white/20 text-white border border-white/15 transition-all hover:scale-105 flex items-center space-x-2">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+91-8463990472</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Interactive "Let's Connect" Email Modal -->
+    <div id="connect-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-slate-950/60 backdrop-blur-md transition-opacity duration-300">
+        <div class="kx-card max-w-lg w-full p-6 sm:p-8 bg-white border border-slate-200 shadow-2xl relative animate-in fade-in zoom-in-95 duration-200" onclick="event.stopPropagation()">
+            
+            <!-- Close Button -->
+            <button onclick="closeConnectModal()" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-800 flex items-center justify-center transition-all cursor-pointer" title="Close Modal">
+                <i class="fas fa-times text-sm"></i>
+            </button>
+
+            <!-- Modal Header -->
+            <div class="mb-6 space-y-1">
+                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#f4fdcf] border border-[#d9f99d] text-[#3f6212] text-xs font-semibold">
+                    <span class="w-2 h-2 rounded-full bg-[#65a30d] animate-pulse"></span>
+                    <span>Direct Mail Gateway</span>
+                </div>
+                <h3 class="text-2xl font-extrabold font-display text-slate-950">Let's Connect &bull; Send an Email</h3>
+                <p class="text-xs sm:text-sm text-slate-500 font-normal">
+                    Draft a message to <strong class="text-slate-800">bandarujnanasivasaiganeswar@gmail.com</strong>. We'll open it pre-filled in your preferred email client!
+                </p>
+            </div>
+
+            <!-- Pre-populated Quick Composer Form -->
+            <div class="space-y-4">
+                <div>
+                    <label class="block text-xs font-mono font-bold uppercase text-slate-500 mb-1">Your Name / Organization</label>
+                    <input type="text" id="email-sender-name" placeholder="e.g. John Doe &bull; Hiring Manager / Tech Lead" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all bg-slate-50/50">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-mono font-bold uppercase text-slate-500 mb-1">Email Subject</label>
+                    <input type="text" id="email-subject" value="Opportunity / Collaboration Inquiry for Sai Ganeswar (AI Engineer)" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all bg-slate-50/50">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-mono font-bold uppercase text-slate-500 mb-1">Message Preview</label>
+                    <textarea id="email-body" rows="4" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all bg-slate-50/50 leading-relaxed">Hi Sai Ganeswar,
+
+I reviewed your portfolio and was impressed by your work with 8-stage CrewAI agent pipelines, FastAPI microservices, and hybrid RAG architecture.
+
+I would love to connect regarding an AI Engineer opportunity / project discussion. Let's set up a quick chat!</textarea>
+                </div>
+
+                <!-- Launch Action Buttons -->
+                <div class="pt-2 space-y-2.5">
+                    <!-- Option A: Webmail Gmail -->
+                    <button onclick="sendViaGmail()" class="btn-shimmer w-full py-3 px-4 rounded-xl font-bold text-sm bg-black hover:bg-slate-800 text-white flex items-center justify-center space-x-2.5 shadow-md hover:shadow-lg transition-all cursor-pointer">
+                        <i class="fab fa-google text-red-400"></i>
+                        <span>Send via Gmail (Web Browser)</span>
+                        <i class="fas fa-external-link-alt text-xs opacity-70"></i>
+                    </button>
+
+                    <!-- Option B: Default Mail Client (Apple Mail, Outlook, Thunderbird) -->
+                    <button onclick="sendViaDefaultMail()" class="w-full py-3 px-4 rounded-xl font-bold text-sm bg-[#b8f022] hover:bg-[#a6de15] text-black flex items-center justify-center space-x-2.5 transition-all shadow-sm hover:shadow-md cursor-pointer">
+                        <i class="fas fa-envelope"></i>
+                        <span>Send via Default Mail App (Apple Mail / Outlook)</span>
+                    </button>
+
+                    <!-- Option C: Copy Address -->
+                    <button onclick="copyModalEmail()" id="modal-copy-btn" class="w-full py-2.5 px-4 rounded-xl font-semibold text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center space-x-2 transition-all cursor-pointer">
+                        <i class="fas fa-copy text-slate-500"></i>
+                        <span id="modal-copy-text">Copy Email Address (bandarujnanasivasaiganeswar@gmail.com)</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Interactive Resume Reviewer Modal -->
+    <div id="resume-modal" class="fixed inset-0 z-[130] hidden items-center justify-center p-2 sm:p-4 md:p-6 bg-slate-950/75 backdrop-blur-md transition-opacity duration-300">
+        <div class="kx-card max-w-5xl w-full h-[94vh] flex flex-col bg-white border border-slate-200 shadow-2xl overflow-hidden relative" onclick="event.stopPropagation()">
+            
+            <!-- Modal Header -->
+            <div class="px-4 py-3 sm:px-6 sm:py-4 border-b border-slate-200/80 bg-white flex items-center justify-between gap-3 shrink-0">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-2xl bg-[#f4fdcf] border border-[#d9f99d] flex items-center justify-center text-[#3f6212] font-bold shrink-0">
+                        <i class="fas fa-file-invoice text-lg"></i>
+                    </div>
+                    <div>
+                        <div class="flex items-center space-x-2">
+                            <h3 class="text-base sm:text-lg font-bold font-display text-slate-950 leading-tight">Bandaru Jnana Siva Sai Ganeswar — Resume</h3>
+                            <span class="hidden sm:inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-[#f4fdcf] text-[#3f6212]">Verified AI Engineer</span>
+                        </div>
+                        <p class="text-[11px] sm:text-xs text-slate-500 mt-0.5">
+                            1 Year Production AI &bull; Unnanu AI &bull; Agentic Workflows &bull; FastAPI &bull; Hybrid RAG
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Action Tools -->
+                <div class="flex items-center space-x-2">
+                    <!-- Zoom Controls -->
+                    <div class="hidden sm:flex items-center bg-slate-100 rounded-xl p-1 border border-slate-200/70 text-xs text-slate-600 font-semibold space-x-1">
+                        <button onclick="changeResumeZoom(-0.15)" class="px-2 py-1 hover:bg-white rounded-lg transition-colors cursor-pointer" title="Zoom Out">
+                            <i class="fas fa-search-minus"></i>
+                        </button>
+                        <span id="resume-zoom-level" class="px-1.5 text-[11px] font-mono">100%</span>
+                        <button onclick="changeResumeZoom(0.15)" class="px-2 py-1 hover:bg-white rounded-lg transition-colors cursor-pointer" title="Zoom In">
+                            <i class="fas fa-search-plus"></i>
+                        </button>
+                        <button onclick="resetResumeZoom()" class="px-2 py-1 hover:bg-white rounded-lg transition-colors text-[10px] cursor-pointer" title="Reset Fit">Fit</button>
+                    </div>
+
+                    <a href="resume.pdf" download="Bandaru_Jnana_Siva_Sai_Ganeswar_AI_Engineer_Resume.pdf" class="btn-shimmer px-3 sm:px-4 py-2 rounded-xl text-xs font-bold bg-black text-white hover:bg-slate-800 transition-all flex items-center space-x-1.5 shadow-sm" title="Download Resume PDF">
+                        <i class="fas fa-download text-xs"></i>
+                        <span>Download PDF</span>
+                    </a>
+                    <a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="hidden md:flex px-3 py-2 rounded-xl text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all items-center space-x-1.5" title="Open in New Tab">
+                        <i class="fas fa-external-link-alt text-xs"></i>
+                        <span>Open Tab</span>
+                    </a>
+                    <button onclick="closeResumeModal()" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-800 flex items-center justify-center transition-all cursor-pointer" title="Close">
+                        <i class="fas fa-times text-xs"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Quick Highlight Strip -->
+            <div class="px-5 py-2 bg-slate-50 border-b border-slate-200/60 flex flex-wrap items-center justify-between gap-2 text-[11px] font-semibold text-slate-600 shrink-0">
+                <div class="flex flex-wrap items-center gap-2">
+                    <span class="px-2.5 py-0.5 rounded-full bg-white border border-slate-200 text-slate-700">⚡ CrewAI &amp; LangChain</span>
+                    <span class="px-2.5 py-0.5 rounded-full bg-white border border-slate-200 text-slate-700">⚡ Hybrid RAG &amp; Azure AI Search</span>
+                    <span class="px-2.5 py-0.5 rounded-full bg-white border border-slate-200 text-slate-700">⚡ FastAPI &amp; Azure SQL</span>
+                    <span class="px-2.5 py-0.5 rounded-full bg-[#f4fdcf] border border-[#d9f99d] text-[#3f6212]">🟢 Immediate Joiner</span>
+                </div>
+                <div class="text-slate-500 text-[11px] flex items-center space-x-2">
+                    <span>Scroll down to view Page 2</span>
+                    <i class="fas fa-arrow-down text-[10px] animate-bounce"></i>
+                </div>
+            </div>
+
+            <!-- High-Resolution Crisp Document Viewer -->
+            <div id="resume-scroll-container" class="flex-1 w-full h-full bg-slate-200/60 overflow-y-auto p-3 sm:p-6 flex flex-col items-center select-text">
+                <!-- Page 1 -->
+                <div class="resume-page-wrapper w-full max-w-3xl mb-6 transition-all duration-200">
+                    <div class="flex items-center justify-between text-[11px] font-mono text-slate-500 mb-1.5 px-1">
+                        <span class="font-bold">PAGE 1 OF 2</span>
+                        <span>AI Engineer Profile &bull; Core Systems &bull; Unnanu AI</span>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden hover:shadow-2xl transition-shadow">
+                        <img src="resume-page-1.png" alt="Sai Ganeswar Resume Page 1" class="w-full h-auto block" loading="eager">
+                    </div>
+                </div>
+
+                <!-- Page 2 -->
+                <div class="resume-page-wrapper w-full max-w-3xl mb-4 transition-all duration-200">
+                    <div class="flex items-center justify-between text-[11px] font-mono text-slate-500 mb-1.5 px-1">
+                        <span class="font-bold">PAGE 2 OF 2</span>
+                        <span>Projects &bull; Production Architecture &bull; Education &amp; Skills</span>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden hover:shadow-2xl transition-shadow">
+                        <img src="resume-page-2.png" alt="Sai Ganeswar Resume Page 2" class="w-full h-auto block" loading="eager">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fallback Bar at Bottom -->
+            <div class="px-4 py-2.5 bg-white border-t border-slate-200 flex items-center justify-between text-xs text-slate-500 shrink-0">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-check-circle text-emerald-600"></i>
+                    <span>Verified Bandaru Jnana Siva Sai Ganeswar Resume</span>
+                </div>
+                <div class="space-x-3">
+                    <a href="resume.pdf" target="_blank" class="font-bold text-black underline hover:text-slate-700">Open Direct PDF in Browser</a>
+                    <span>&bull;</span>
+                    <button onclick="closeResumeModal()" class="font-semibold text-slate-600 hover:text-black cursor-pointer">Return to Portfolio</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 bg-white py-12 px-6 text-center text-xs text-slate-500">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="font-medium text-slate-700 flex items-center space-x-2">
+                <span>Bandaru Jnana Siva Sai Ganeswar &bull; AI Engineer</span>
+                <button onclick="openWelcomePortal()" class="text-xs text-slate-400 hover:text-black underline cursor-pointer ml-1" title="View Welcome Card">
+                    (Welcome Card)
+                </button>
+            </div>
+            <div class="flex items-center space-x-5 text-slate-600 font-medium">
+                <button onclick="openResumeModal()" class="hover:text-black font-bold text-slate-900 transition-colors flex items-center space-x-1.5 cursor-pointer">
+                    <i class="fas fa-file-invoice text-emerald-600"></i>
+                    <span>Review Resume</span>
+                </button>
+                <a href="https://linkedin.com/in/bandaru-jnana-siva-saiganeswar" target="_blank" rel="noopener noreferrer" class="hover:text-black transition-colors flex items-center space-x-1.5">
+                    <i class="fab fa-linkedin text-base"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <button onclick="openConnectModal()" class="hover:text-black transition-colors flex items-center space-x-1.5 cursor-pointer">
+                    <i class="fas fa-envelope text-base"></i>
+                    <span>Email</span>
+                </button>
+                <a href="tel:+918463990472" class="hover:text-black transition-colors flex items-center space-x-1.5">
+                    <i class="fas fa-phone text-base"></i>
+                    <span>Call</span>
+                </a>
+            </div>
+            <div>
+                &copy; 2026 B.J.S.S. Ganeswar. Designed with professional editorial finesse.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Comprehensive Animation Engine: Cursor Glow, 3D Tilt, Text Cycler, CountUp, Scroll Reveal -->
+    <script>
+
+        // 2. Dynamic Hero Word Cycler
+        const heroWords = [
+            'actually ship',
+            'solve bottlenecks',
+            'run autonomously',
+            'scale on Azure',
+            'extract in < 60s'
+        ];
+        let wordIndex = 0;
+        const wordEl = document.getElementById('dynamic-hero-word');
+        if (wordEl) {
+            setInterval(() => {
+                wordIndex = (wordIndex + 1) % heroWords.length;
+                wordEl.style.opacity = '0';
+                wordEl.style.transform = 'translateY(8px)';
+                setTimeout(() => {
+                    wordEl.textContent = heroWords[wordIndex];
+                    wordEl.style.opacity = '1';
+                    wordEl.style.transform = 'translateY(0)';
+                }, 280);
+            }, 2600);
+        }
+
+
+        // 4. Scroll Reveal Animations (IntersectionObserver)
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-revealed');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+            revealObserver.observe(el);
+        });
+
+        // 5. Animated Number Counter for Metric Stats
+        let counted = false;
+        const statsSection = document.getElementById('overview');
+        if (statsSection) {
+            const statsObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !counted) {
+                        counted = true;
+                        document.querySelectorAll('.counter-val').forEach(counter => {
+                            const target = +counter.getAttribute('data-target');
+                            let current = 0;
+                            const increment = Math.ceil(target / 40);
+                            const timer = setInterval(() => {
+                                current += increment;
+                                if (current >= target) {
+                                    counter.textContent = target;
+                                    clearInterval(timer);
+                                } else {
+                                    counter.textContent = current;
+                                }
+                            }, 35);
+                        });
+                    }
+                });
+            }, { threshold: 0.3 });
+            statsObserver.observe(statsSection);
+        }
+
+        // 6. System Category Filter Logic
+        function filterSystems(category) {
+            const systemCards = document.querySelectorAll('.system-card');
+            const buttons = document.querySelectorAll('.system-filter-btn');
+
+            buttons.forEach(btn => {
+                if (btn.getAttribute('data-category') === category) {
+                    btn.className = 'system-filter-btn px-4 py-2 rounded-full text-xs font-bold bg-black text-white shadow-sm hover:scale-105 transition-all';
+                } else {
+                    btn.className = 'system-filter-btn px-4 py-2 rounded-full text-xs font-bold bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 hover:scale-105 transition-all';
+                }
+            });
+
+            systemCards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(16px)';
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, 50);
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // 8. Interactive Let's Connect Email Modal Controller
+        function openConnectModal() {
+            const modal = document.getElementById('connect-modal');
+            if (!modal) return;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeConnectModal() {
+            const modal = document.getElementById('connect-modal');
+            if (!modal) return;
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+
+        // Close on backdrop click or ESC key
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeConnectModal();
+        });
+        document.getElementById('connect-modal')?.addEventListener('click', closeConnectModal);
+
+        // Helper to assemble subject & body
+        function getEmailPayload() {
+            const name = document.getElementById('email-sender-name')?.value.trim() || '';
+            const subject = document.getElementById('email-subject')?.value.trim() || 'Inquiry for Sai Ganeswar (AI Engineer)';
+            let body = document.getElementById('email-body')?.value.trim() || '';
+            if (name) {
+                body = `Sender / Organization: ${name}\n\n` + body;
+            }
+            return { subject, body };
+        }
+
+        // Option A: Send via Web Gmail in browser
+        function sendViaGmail() {
+            const { subject, body } = getEmailPayload();
+            const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=bandarujnanasivasaiganeswar@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            window.open(gmailUrl, '_blank');
+        }
+
+        // Option B: Send via Default Mail App (Apple Mail, Outlook, etc.)
+        function sendViaDefaultMail() {
+            const { subject, body } = getEmailPayload();
+            const mailtoUrl = `mailto:bandarujnanasivasaiganeswar@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            window.location.href = mailtoUrl;
+        }
+
+        // Option C: Copy Email Address with visual feedback
+        function copyModalEmail() {
+            const email = 'bandarujnanasivasaiganeswar@gmail.com';
+            navigator.clipboard.writeText(email).then(() => {
+                const textEl = document.getElementById('modal-copy-text');
+                const btn = document.getElementById('modal-copy-btn');
+                if (textEl && btn) {
+                    textEl.textContent = '✓ Copied to clipboard!';
+                    btn.classList.add('bg-emerald-100', 'text-emerald-800');
+                    setTimeout(() => {
+                        textEl.textContent = `Copy Email Address (${email})`;
+                        btn.classList.remove('bg-emerald-100', 'text-emerald-800');
+                    }, 2500);
+                }
+            });
+        }
+
+        // 9. Interactive Welcome Portal & Resume Reviewer Controller
+        function enterPortfolio() {
+            const portal = document.getElementById('welcome-portal');
+            if (portal) {
+                portal.classList.add('portal-exit');
+                setTimeout(() => {
+                    portal.style.display = 'none';
+                    portal.classList.remove('portal-exit');
+                    // Only restore overflow if other modals are not open
+                    const resumeModal = document.getElementById('resume-modal');
+                    const connectModal = document.getElementById('connect-modal');
+                    const resumeOpen = resumeModal && !resumeModal.classList.contains('hidden');
+                    const connectOpen = connectModal && !connectModal.classList.contains('hidden');
+                    if (!resumeOpen && !connectOpen) {
+                        document.body.style.overflow = '';
+                    }
+                }, 440);
+            } else {
+                document.body.style.overflow = '';
+            }
+        }
+
+        function openWelcomePortal() {
+            const portal = document.getElementById('welcome-portal');
+            if (!portal) return;
+            portal.style.display = 'flex';
+            portal.classList.remove('portal-exit');
+            document.body.style.overflow = 'hidden';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function openResumeModal() {
+            const modal = document.getElementById('resume-modal');
+            if (!modal) return;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeResumeModal() {
+            const modal = document.getElementById('resume-modal');
+            if (!modal) return;
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            
+            // Check if welcome portal or connect modal is still displayed
+            const portal = document.getElementById('welcome-portal');
+            const portalOpen = portal && portal.style.display !== 'none' && !portal.classList.contains('portal-exit');
+            const connectModal = document.getElementById('connect-modal');
+            const connectOpen = connectModal && !connectModal.classList.contains('hidden');
+            if (!portalOpen && !connectOpen) {
+                document.body.style.overflow = '';
+            }
+        }
+
+        function enterAndReviewResume() {
+            enterPortfolio();
+            setTimeout(() => {
+                openResumeModal();
+            }, 300);
+        }
+
+        // On initial page load: lock scrolling while welcome portal is active
+        (function initWelcomeState() {
+            const portal = document.getElementById('welcome-portal');
+            if (portal && portal.style.display !== 'none') {
+                document.body.style.overflow = 'hidden';
+            }
+        })();
+
+        // Close Resume Modal on ESC key or backdrop click
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeResumeModal();
+            }
+        });
+        document.getElementById('resume-modal')?.addEventListener('click', closeResumeModal);
+
+        // 10. Resume Viewer Zoom Controls
+        let currentResumeZoom = 1;
+        function changeResumeZoom(delta) {
+            currentResumeZoom = Math.min(Math.max(0.6, currentResumeZoom + delta), 1.5);
+            applyResumeZoom();
+        }
+        function resetResumeZoom() {
+            currentResumeZoom = 1;
+            applyResumeZoom();
+        }
+        function applyResumeZoom() {
+            const pages = document.querySelectorAll('.resume-page-wrapper');
+            pages.forEach(p => {
+                p.style.maxWidth = `${Math.round(48 * currentResumeZoom)}rem`;
+            });
+            const label = document.getElementById('resume-zoom-level');
+            if (label) label.textContent = `${Math.round(currentResumeZoom * 100)}%`;
+        }
+    </script>
+</body>
+</html>
