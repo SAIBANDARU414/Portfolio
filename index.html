@@ -198,42 +198,42 @@
 <body class="relative min-h-screen selection:bg-[#b8f022] selection:text-black">
 
     <!-- Welcome Portfolio Gate Overlay Card -->
-    <div id="welcome-portal" class="fixed inset-0 z-[120] flex items-center justify-center p-4 sm:p-6 overflow-y-auto portal-backdrop transition-all duration-500">
+    <div id="welcome-portal" class="fixed inset-0 z-[120] flex items-center justify-center p-3 sm:p-6 overflow-y-auto portal-backdrop transition-all duration-500">
         <!-- Ambient Decorative Glows inside Portal (Static, Elegant) -->
-        <div class="ambient-orb w-[30rem] h-[30rem] bg-[#dcfce7] top-[8%] left-[12%]"></div>
-        <div class="ambient-orb w-[28rem] h-[28rem] bg-[#fef9c3] bottom-[8%] right-[12%]"></div>
+        <div class="ambient-orb w-[24rem] sm:w-[30rem] h-[24rem] sm:h-[30rem] bg-[#dcfce7] top-[8%] left-[8%]"></div>
+        <div class="ambient-orb w-[22rem] sm:w-[28rem] h-[22rem] sm:h-[28rem] bg-[#fef9c3] bottom-[8%] right-[8%]"></div>
 
-        <!-- Central Welcome Card (Clean, Minimal & Focused) -->
-        <div class="kx-card max-w-lg w-full p-8 sm:p-12 bg-white border border-slate-200 shadow-2xl relative my-auto z-10 text-center">
+        <!-- Central Welcome Card (Clean, Minimal & Mobile Responsive) -->
+        <div class="kx-card max-w-md sm:max-w-lg w-full p-6 sm:p-10 bg-white border border-slate-200 shadow-2xl relative my-auto z-10 text-center">
             
             <!-- Monogram Avatar -->
-            <div class="mx-auto w-20 h-20 rounded-3xl bg-black text-white flex items-center justify-center font-display font-extrabold text-3xl shadow-lg ring-4 ring-[#b8f022]/40 mb-6">
+            <div class="mx-auto w-16 h-16 sm:w-20 sm:h-20 rounded-2xl sm:rounded-3xl bg-black text-white flex items-center justify-center font-display font-extrabold text-2xl sm:text-3xl shadow-lg ring-4 ring-[#b8f022]/40 mb-4 sm:mb-6">
                 G
             </div>
 
             <!-- Welcome Heading -->
-            <div class="space-y-2 mb-8">
-                <p class="text-xs font-mono font-bold tracking-widest uppercase text-slate-400">
+            <div class="space-y-1.5 sm:space-y-2 mb-6 sm:mb-8">
+                <p class="text-[11px] sm:text-xs font-mono font-bold tracking-widest uppercase text-slate-400">
                     Portfolio Experience
                 </p>
-                <h2 class="text-2xl sm:text-3xl font-extrabold font-display text-slate-950 tracking-tight">
+                <h2 class="text-xl sm:text-2xl md:text-3xl font-extrabold font-display text-slate-950 tracking-tight leading-tight">
                     Welcome to My Portfolio
                 </h2>
-                <p class="text-sm font-semibold text-slate-600">
+                <p class="text-xs sm:text-sm font-semibold text-slate-600">
                     Bandaru Jnana Siva Sai Ganeswar &bull; AI Engineer
                 </p>
             </div>
 
             <!-- Action Buttons: Enter Portfolio & Review My Resume -->
-            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5">
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
                 <!-- Enter Button -->
-                <button onclick="enterPortfolio()" id="btn-enter-portfolio" class="btn-shimmer flex-1 py-4 px-6 rounded-2xl font-bold text-sm sm:text-base bg-black hover:bg-slate-800 text-white flex items-center justify-center space-x-2.5 shadow-md hover:shadow-xl transition-all cursor-pointer">
+                <button onclick="enterPortfolio()" id="btn-enter-portfolio" class="btn-shimmer w-full sm:flex-1 py-3.5 sm:py-4 px-4 sm:px-6 rounded-2xl font-bold text-sm sm:text-base bg-black hover:bg-slate-800 text-white flex items-center justify-center space-x-2.5 shadow-md hover:shadow-xl transition-all cursor-pointer">
                     <span>Enter Portfolio</span>
                     <i class="fas fa-arrow-right text-xs"></i>
                 </button>
 
                 <!-- Review Resume Button -->
-                <button onclick="openResumeModal()" id="btn-review-resume-welcome" class="btn-shimmer flex-1 py-4 px-6 rounded-2xl font-bold text-sm sm:text-base bg-[#b8f022] hover:bg-[#a6de15] text-black flex items-center justify-center space-x-2.5 shadow-md hover:shadow-lg transition-all cursor-pointer">
+                <button onclick="openResumeModal()" id="btn-review-resume-welcome" class="btn-shimmer w-full sm:flex-1 py-3.5 sm:py-4 px-4 sm:px-6 rounded-2xl font-bold text-sm sm:text-base bg-[#b8f022] hover:bg-[#a6de15] text-black flex items-center justify-center space-x-2.5 shadow-md hover:shadow-lg transition-all cursor-pointer">
                     <i class="fas fa-file-invoice text-base"></i>
                     <span>Review My Resume</span>
                 </button>
@@ -263,18 +263,18 @@
 
     <!-- Navigation Bar -->
     <header class="fixed top-0 left-0 right-0 z-50 navbar-blur">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-            <a href="#hero" class="flex items-center space-x-3 group">
-                <div class="w-10 h-10 rounded-2xl bg-black text-white flex items-center justify-center font-display font-bold text-base shadow-sm group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
+            <a href="#hero" class="flex items-center space-x-2.5 sm:space-x-3 group">
+                <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-2xl bg-black text-white flex items-center justify-center font-display font-bold text-sm sm:text-base shadow-sm group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
                     G
                 </div>
                 <div class="flex flex-col">
-                    <span class="font-display font-bold text-base tracking-tight text-slate-900 group-hover:text-black transition-colors">Sai Ganeswar</span>
-                    <span class="text-[11px] font-medium text-slate-500">AI Engineer &bull; Unnanu AI</span>
+                    <span class="font-display font-bold text-sm sm:text-base tracking-tight text-slate-900 group-hover:text-black transition-colors">Sai Ganeswar</span>
+                    <span class="text-[10px] sm:text-[11px] font-medium text-slate-500">AI Engineer &bull; Unnanu AI</span>
                 </div>
             </a>
 
-            <!-- Nav Links -->
+            <!-- Nav Links (Desktop) -->
             <nav class="hidden md:flex items-center space-x-1 bg-slate-100/80 p-1.5 rounded-full border border-slate-200/80 text-xs font-semibold text-slate-600">
                 <a href="#overview" class="px-4 py-2 rounded-full hover:text-black hover:bg-white hover:shadow-sm transition-all duration-200">Overview</a>
                 <a href="#systems" class="px-4 py-2 rounded-full hover:text-black hover:bg-white hover:shadow-sm transition-all duration-200">Production Work</a>
@@ -283,29 +283,62 @@
                 <a href="#education" class="px-4 py-2 rounded-full hover:text-black hover:bg-white hover:shadow-sm transition-all duration-200">Education</a>
             </nav>
 
-            <!-- Status & CTA -->
-            <div class="flex items-center space-x-2 sm:space-x-3">
+            <!-- Status & CTA & Hamburger for Mobile -->
+            <div class="flex items-center space-x-1.5 sm:space-x-3">
                 <div class="hidden xl:flex items-center space-x-2 px-3 py-1.5 rounded-full bg-[#f4fdcf] border border-[#d9f99d] text-[#3f6212] text-xs font-semibold">
                     <span class="w-2 h-2 rounded-full bg-[#65a30d] animate-pulse"></span>
                     <span>Notice Period &bull; Immediate</span>
                 </div>
-                <button onclick="openWelcomePortal()" class="hidden md:flex items-center space-x-1.5 px-3 py-2 rounded-full text-xs font-semibold text-slate-500 hover:text-black hover:bg-slate-100 transition-all cursor-pointer" title="Reopen Welcome Card">
+                <a href="https://github.com/SAIBANDARU414" target="_blank" rel="noopener noreferrer" class="hidden md:flex items-center space-x-1.5 px-3 py-2 rounded-full text-xs font-semibold text-slate-600 hover:text-black hover:bg-slate-100 transition-all cursor-pointer" title="GitHub Profile">
+                    <i class="fab fa-github text-sm text-slate-800"></i>
+                    <span>GitHub</span>
+                </a>
+                <button onclick="openWelcomePortal()" class="hidden lg:flex items-center space-x-1.5 px-3 py-2 rounded-full text-xs font-semibold text-slate-500 hover:text-black hover:bg-slate-100 transition-all cursor-pointer" title="Reopen Welcome Card">
                     <i class="fas fa-sparkles text-amber-500 text-xs"></i>
                     <span>Welcome</span>
                 </button>
-                <button onclick="openResumeModal()" class="px-3.5 py-2 rounded-full text-xs font-bold text-slate-800 bg-white hover:bg-slate-50 border border-slate-200 shadow-xs hover:border-slate-300 hover:scale-105 transition-all flex items-center space-x-1.5 cursor-pointer" title="Review Resume PDF">
+                <button onclick="openResumeModal()" class="px-2.5 sm:px-3.5 py-1.5 sm:py-2 rounded-full text-xs font-bold text-slate-800 bg-white hover:bg-slate-50 border border-slate-200 shadow-xs hover:border-slate-300 transition-all flex items-center space-x-1 sm:space-x-1.5 cursor-pointer" title="Review Resume PDF">
                     <i class="fas fa-file-invoice text-slate-700 text-xs"></i>
-                    <span>Review Resume</span>
+                    <span class="inline">Resume</span>
                 </button>
-                <button onclick="openConnectModal()" class="btn-shimmer px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs md:text-sm font-bold text-black bg-[#b8f022] hover:bg-[#a6de15] transition-all shadow-sm hover:shadow-md hover:scale-105 flex items-center space-x-2 cursor-pointer">
-                    <span>Let's Connect</span>
-                    <i class="fas fa-paper-plane text-xs transition-transform group-hover:translate-x-1"></i>
+                <button onclick="openConnectModal()" class="btn-shimmer px-3 sm:px-5 py-1.5 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold text-black bg-[#b8f022] hover:bg-[#a6de15] transition-all shadow-sm hover:shadow-md flex items-center space-x-1.5 cursor-pointer">
+                    <span>Connect</span>
+                    <i class="fas fa-paper-plane text-[10px] sm:text-xs"></i>
                 </button>
+                <!-- Hamburger Button (Mobile) -->
+                <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-xl text-slate-700 hover:bg-slate-100 focus:outline-none cursor-pointer" aria-label="Toggle navigation menu">
+                    <i id="mobile-menu-icon" class="fas fa-bars text-lg"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200/80 bg-white/95 backdrop-blur-md px-5 py-4 transition-all duration-200 shadow-xl">
+            <div class="flex flex-col space-y-1 text-sm font-semibold text-slate-700">
+                <a href="#overview" onclick="toggleMobileMenu()" class="px-3.5 py-2.5 rounded-xl hover:bg-slate-100 hover:text-black transition-colors">Overview &amp; Metrics</a>
+                <a href="#systems" onclick="toggleMobileMenu()" class="px-3.5 py-2.5 rounded-xl hover:bg-slate-100 hover:text-black transition-colors">Production Work (7 Systems)</a>
+                <a href="#experience" onclick="toggleMobileMenu()" class="px-3.5 py-2.5 rounded-xl hover:bg-slate-100 hover:text-black transition-colors">Work Experience</a>
+                <a href="#skills" onclick="toggleMobileMenu()" class="px-3.5 py-2.5 rounded-xl hover:bg-slate-100 hover:text-black transition-colors">Technical Expertise</a>
+                <a href="#education" onclick="toggleMobileMenu()" class="px-3.5 py-2.5 rounded-xl hover:bg-slate-100 hover:text-black transition-colors">Education &amp; Credentials</a>
+                <a href="https://github.com/SAIBANDARU414" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2.5 rounded-xl hover:bg-slate-100 hover:text-black transition-colors flex items-center justify-between">
+                    <span class="flex items-center space-x-2">
+                        <i class="fab fa-github text-base text-slate-900"></i>
+                        <span>GitHub (SAIBANDARU414)</span>
+                    </span>
+                    <i class="fas fa-external-link-alt text-xs text-slate-400"></i>
+                </a>
+                <div class="pt-3 mt-1 border-t border-slate-100 flex items-center justify-between">
+                    <button onclick="toggleMobileMenu(); openWelcomePortal();" class="text-xs font-semibold text-slate-600 hover:text-black flex items-center space-x-1.5 py-1">
+                        <i class="fas fa-sparkles text-amber-500"></i>
+                        <span>Reopen Welcome Card</span>
+                    </button>
+                    <span class="text-[11px] font-semibold text-[#3f6212] bg-[#f4fdcf] px-2.5 py-0.5 rounded-full">Notice Period &bull; Immediate</span>
+                </div>
             </div>
         </div>
     </header>
 
-    <main class="relative z-10 pt-36 pb-24 px-6 max-w-7xl mx-auto">
+    <main class="relative z-10 pt-24 sm:pt-36 pb-20 sm:pb-24 px-4 sm:px-6 max-w-7xl mx-auto">
 
         <!-- Hero Section with Animated Word Cycler & Karvynox Editorial Flow -->
         <section id="hero" class="pt-6 pb-16 relative reveal-on-scroll">
@@ -313,16 +346,16 @@
                 
                 <div class="lg:w-8/12 space-y-7">
                     <!-- Notice Period Pill -->
-                    <div class="inline-flex items-center space-x-2.5 px-4 py-1.5 rounded-full bg-white border border-slate-200 shadow-sm text-xs font-semibold text-slate-700 hover:border-slate-300 transition-all hover:scale-105">
+                    <div class="inline-flex items-center space-x-2 px-3 sm:px-4 py-1.5 rounded-full bg-white border border-slate-200 shadow-sm text-[11px] sm:text-xs font-semibold text-slate-700 hover:border-slate-300 transition-all">
                         <span class="w-2.5 h-2.5 rounded-full bg-[#84cc16] inline-block animate-pulse"></span>
                         <span>Serving Notice Period &bull; Open for AI &amp; Agentic Roles</span>
                     </div>
 
                     <!-- Bold Editorial Headline with Dynamic Animated Rotating Word -->
-                    <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold font-display tracking-tight text-slate-950 leading-[1.08]">
+                    <h1 class="text-3xl sm:text-5xl lg:text-7xl font-extrabold font-display tracking-tight text-slate-950 leading-[1.12] sm:leading-[1.08]">
                         Building AI systems that <br>
                         <span class="relative inline-block mt-1">
-                            <span id="dynamic-hero-word" class="relative z-10 px-3 py-0.5 rounded-2xl bg-[#f4fdcf] text-[#3f6212] transition-all duration-500 inline-block">actually ship</span>
+                            <span id="dynamic-hero-word" class="relative z-10 px-2.5 sm:px-3 py-0.5 rounded-xl sm:rounded-2xl bg-[#f4fdcf] text-[#3f6212] transition-all duration-500 inline-block">actually ship</span>
                             <!-- Karvynox style playful underline swoosh -->
                             <svg viewBox="0 0 280 24" fill="none" class="absolute -bottom-2 left-0 w-full h-auto text-[#b8f022] -z-0">
                                 <path d="M4 14C70 4 190 2 276 12C210 16 90 20 4 16" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
@@ -332,45 +365,51 @@
                     </h1>
 
                     <!-- Clean Professional Subtitle -->
-                    <p class="text-slate-600 text-lg sm:text-xl font-normal leading-relaxed max-w-2xl">
+                    <p class="text-slate-600 text-base sm:text-xl font-normal leading-relaxed max-w-2xl">
                         I am an <strong class="text-slate-900 font-semibold">AI Engineer</strong> with 1 year of production experience building LLM-powered agent pipelines, automated document intelligence platforms, hybrid RAG candidate matching, and enterprise FastAPI microservices.
                     </p>
 
                     <!-- Location and direct links -->
-                    <div class="flex flex-wrap items-center gap-6 text-sm text-slate-500 font-medium pt-1">
-                        <span class="flex items-center space-x-2">
+                    <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs sm:text-sm text-slate-500 font-medium pt-1">
+                        <span class="flex items-center space-x-1.5">
                             <i class="fas fa-location-dot text-slate-400"></i>
-                            <span>Hyderabad / Andhra Pradesh, India</span>
+                            <span>Hyderabad / AP, India</span>
                         </span>
-                        <span>&bull;</span>
-                        <span class="flex items-center space-x-2">
+                        <span class="hidden sm:inline">&bull;</span>
+                        <span class="flex items-center space-x-1.5">
                             <i class="fas fa-phone text-slate-400"></i>
                             <span>+91-8463990472</span>
                         </span>
-                        <span>&bull;</span>
+                        <span class="hidden sm:inline">&bull;</span>
                         <button onclick="openConnectModal()" class="text-slate-700 hover:text-black underline decoration-slate-300 underline-offset-4 cursor-pointer">
                             bandarujnanasivasaiganeswar@gmail.com
                         </button>
                     </div>
 
                     <!-- Primary Action Buttons -->
-                    <div class="flex flex-wrap items-center gap-3.5 pt-4">
-                        <button onclick="openResumeModal()" class="btn-shimmer px-7 py-4 rounded-2xl font-bold text-sm bg-[#b8f022] hover:bg-[#a6de15] text-black shadow-md hover:shadow-xl hover:-translate-y-1 transition-all flex items-center space-x-2.5 cursor-pointer">
+                    <div class="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3 pt-3 sm:pt-4">
+                        <button onclick="openResumeModal()" class="btn-shimmer w-full sm:w-auto px-6 sm:px-7 py-3.5 sm:py-4 rounded-2xl font-bold text-sm bg-[#b8f022] hover:bg-[#a6de15] text-black shadow-md hover:shadow-xl transition-all flex items-center justify-center space-x-2.5 cursor-pointer">
                             <i class="fas fa-file-invoice text-base"></i>
                             <span>Review Resume</span>
                         </button>
-                        <a href="#systems" class="btn-shimmer px-6 py-4 rounded-2xl font-bold text-sm bg-black hover:bg-slate-800 text-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all flex items-center space-x-3">
+                        <a href="#systems" class="btn-shimmer w-full sm:w-auto px-5 sm:px-6 py-3.5 sm:py-4 rounded-2xl font-bold text-sm bg-black hover:bg-slate-800 text-white shadow-md hover:shadow-xl transition-all flex items-center justify-center space-x-3">
                             <span>Explore Production Work</span>
                             <i class="fas fa-arrow-down text-xs animate-bounce"></i>
                         </a>
-                        <a href="https://linkedin.com/in/bandaru-jnana-siva-saiganeswar" target="_blank" rel="noopener noreferrer" class="px-5 py-4 rounded-2xl font-bold text-sm bg-white hover:bg-slate-50 text-slate-800 border border-slate-200 shadow-sm hover:border-slate-300 hover:-translate-y-1 transition-all flex items-center space-x-2.5">
-                            <i class="fab fa-linkedin text-blue-600 text-base"></i>
-                            <span>LinkedIn Profile</span>
-                        </a>
-                        <button onclick="navigator.clipboard.writeText('bandarujnanasivasaiganeswar@gmail.com'); alert('Email address copied to clipboard!');" class="px-5 py-4 rounded-2xl font-semibold text-sm bg-slate-100 hover:bg-slate-200 text-slate-700 hover:-translate-y-1 transition-all flex items-center space-x-2 cursor-pointer" title="Copy Email">
-                            <i class="fas fa-copy text-slate-500"></i>
-                            <span>Copy Email</span>
-                        </button>
+                        <div class="flex items-center gap-2.5 w-full sm:w-auto">
+                            <a href="https://github.com/SAIBANDARU414" target="_blank" rel="noopener noreferrer" class="flex-1 sm:flex-none px-4 sm:px-5 py-3 sm:py-4 rounded-2xl font-bold text-xs sm:text-sm bg-white hover:bg-slate-50 text-slate-800 border border-slate-200 shadow-sm hover:border-slate-300 transition-all flex items-center justify-center space-x-2" title="GitHub Profile">
+                                <i class="fab fa-github text-slate-900 text-base"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://linkedin.com/in/bandaru-jnana-siva-saiganeswar" target="_blank" rel="noopener noreferrer" class="flex-1 sm:flex-none px-4 sm:px-5 py-3 sm:py-4 rounded-2xl font-bold text-xs sm:text-sm bg-white hover:bg-slate-50 text-slate-800 border border-slate-200 shadow-sm hover:border-slate-300 transition-all flex items-center justify-center space-x-2" title="LinkedIn Profile">
+                                <i class="fab fa-linkedin text-blue-600 text-base"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <button onclick="navigator.clipboard.writeText('bandarujnanasivasaiganeswar@gmail.com'); alert('Email address copied to clipboard!');" class="flex-1 sm:flex-none px-4 sm:px-5 py-3 sm:py-4 rounded-2xl font-semibold text-xs sm:text-sm bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex items-center justify-center space-x-2 cursor-pointer" title="Copy Email">
+                                <i class="fas fa-copy text-slate-500"></i>
+                                <span>Copy Email</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
 
@@ -378,7 +417,7 @@
                 <div class="lg:w-4/12 w-full flex flex-col items-center lg:items-end justify-center relative">
                     
                     <!-- Clean Circular Badge (Static, Professional) -->
-                    <div class="relative w-36 h-36 mb-6">
+                    <div class="relative w-28 h-28 sm:w-36 sm:h-36 mb-4 sm:mb-6">
                         <div class="absolute inset-0 spinning-badge">
                             <svg viewBox="0 0 120 120" class="w-full h-full">
                                 <path id="badgePath" d="M 60, 60 m -45, 0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0" fill="none"/>
@@ -389,13 +428,13 @@
                                 </text>
                             </svg>
                         </div>
-                        <div class="absolute inset-4 rounded-full bg-[#b8f022] flex items-center justify-center shadow-md hover:scale-110 transition-transform cursor-pointer">
-                            <i class="fas fa-bolt text-2xl text-black"></i>
+                        <div class="absolute inset-3 sm:inset-4 rounded-full bg-[#b8f022] flex items-center justify-center shadow-md hover:scale-110 transition-transform cursor-pointer">
+                            <i class="fas fa-bolt text-xl sm:text-2xl text-black"></i>
                         </div>
                     </div>
 
-                    <!-- Soft Editorial Callout Card with Tilt Effect -->
-                    <div class="kx-card p-6 w-full max-w-sm space-y-4">
+                    <!-- Soft Editorial Callout Card -->
+                    <div class="kx-card p-5 sm:p-6 w-full max-w-sm space-y-4">
                         <div class="flex items-center justify-between border-b border-slate-100 pb-3">
                             <span class="text-xs font-mono font-bold uppercase tracking-wider text-slate-400">Current Role</span>
                             <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-[#f4fdcf] text-[#3f6212]">Notice Period</span>
@@ -426,15 +465,15 @@
         </section>
 
         <!-- Curated Core Production Systems Badge Strip (Clean, Professional & Static) -->
-        <section class="py-5 border-y border-slate-200/80 bg-white/70 backdrop-blur-sm -mx-6 px-6 my-10">
+        <section class="py-4 sm:py-5 border-y border-slate-200/80 bg-white/70 backdrop-blur-sm mx-auto px-2 sm:px-6 my-8 sm:my-10 rounded-2xl">
             <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-xs font-mono font-bold uppercase text-slate-700">
-                <span class="px-3.5 py-1.5 rounded-full bg-slate-100 border border-slate-200/90">⚡ 8-Stage CrewAI Pipelines</span>
-                <span class="px-3.5 py-1.5 rounded-full bg-slate-100 border border-slate-200/90">⚡ FastAPI Microservices</span>
-                <span class="px-3.5 py-1.5 rounded-full bg-slate-100 border border-slate-200/90">⚡ Hybrid RAG &amp; BM25</span>
-                <span class="px-3.5 py-1.5 rounded-full bg-slate-100 border border-slate-200/90">⚡ n8n AI Automations</span>
-                <span class="px-3.5 py-1.5 rounded-full bg-slate-100 border border-slate-200/90">⚡ Azure SQL &amp; Drizzle ORM</span>
-                <span class="px-3.5 py-1.5 rounded-full bg-slate-100 border border-slate-200/90">⚡ Docker &amp; CI/CD</span>
-                <span class="px-3.5 py-1.5 rounded-full bg-slate-100 border border-slate-200/90">⚡ 60+ REST Endpoints</span>
+                <span class="px-3 py-1.5 rounded-full bg-slate-100 border border-slate-200/90 text-[11px] sm:text-xs">⚡ 8-Stage CrewAI Pipelines</span>
+                <span class="px-3 py-1.5 rounded-full bg-slate-100 border border-slate-200/90 text-[11px] sm:text-xs">⚡ FastAPI Microservices</span>
+                <span class="px-3 py-1.5 rounded-full bg-slate-100 border border-slate-200/90 text-[11px] sm:text-xs">⚡ Hybrid RAG &amp; BM25</span>
+                <span class="px-3 py-1.5 rounded-full bg-slate-100 border border-slate-200/90 text-[11px] sm:text-xs">⚡ n8n AI Automations</span>
+                <span class="px-3 py-1.5 rounded-full bg-slate-100 border border-slate-200/90 text-[11px] sm:text-xs">⚡ Azure SQL &amp; Drizzle ORM</span>
+                <span class="px-3 py-1.5 rounded-full bg-slate-100 border border-slate-200/90 text-[11px] sm:text-xs">⚡ Docker &amp; CI/CD</span>
+                <span class="px-3 py-1.5 rounded-full bg-slate-100 border border-slate-200/90 text-[11px] sm:text-xs">⚡ 60+ REST Endpoints</span>
             </div>
         </section>
 
@@ -503,7 +542,7 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-7" id="systems-container">
                 
                 <!-- System 1: Document Intelligence Platform -->
-                <div class="system-card kx-card p-8 flex flex-col justify-between" data-category="agents">
+                <div class="system-card kx-card p-5 sm:p-8 flex flex-col justify-between" data-category="agents">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
                             <span class="kx-lime-pill font-mono text-[11px]">CrewAI + Groq</span>
@@ -528,7 +567,7 @@
                 </div>
 
                 <!-- System 2: Resume Chatbot AI Matchmaking -->
-                <div class="system-card kx-card p-8 flex flex-col justify-between" data-category="agents">
+                <div class="system-card kx-card p-5 sm:p-8 flex flex-col justify-between" data-category="agents">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
                             <span class="kx-pill font-mono text-[11px] bg-sky-50 text-sky-800 border-sky-200">Hybrid RAG</span>
@@ -553,7 +592,7 @@
                 </div>
 
                 <!-- System 3: AI-Powered DNS Security Agent -->
-                <div class="system-card kx-card p-8 flex flex-col justify-between" data-category="agents">
+                <div class="system-card kx-card p-5 sm:p-8 flex flex-col justify-between" data-category="agents">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
                             <span class="kx-pill font-mono text-[11px] bg-purple-50 text-purple-800 border-purple-200">Google Gemini</span>
@@ -578,7 +617,7 @@
                 </div>
 
                 <!-- System 4: Full-Stack AI Job Marketplace -->
-                <div class="system-card kx-card p-8 flex flex-col justify-between" data-category="backend">
+                <div class="system-card kx-card p-5 sm:p-8 flex flex-col justify-between" data-category="backend">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
                             <span class="kx-pill font-mono text-[11px] bg-emerald-50 text-emerald-800 border-emerald-200">60+ REST APIs</span>
@@ -603,7 +642,7 @@
                 </div>
 
                 <!-- System 5: AI Workflow Automation with n8n -->
-                <div class="system-card kx-card p-8 flex flex-col justify-between" data-category="automation">
+                <div class="system-card kx-card p-5 sm:p-8 flex flex-col justify-between" data-category="automation">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
                             <span class="kx-pill font-mono text-[11px] bg-amber-50 text-amber-800 border-amber-200">n8n Orchestration</span>
@@ -628,7 +667,7 @@
                 </div>
 
                 <!-- System 6: LinkedIn AI Sourcing Extension -->
-                <div class="system-card kx-card p-8 flex flex-col justify-between" data-category="automation">
+                <div class="system-card kx-card p-5 sm:p-8 flex flex-col justify-between" data-category="automation">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
                             <span class="kx-pill font-mono text-[11px] bg-blue-50 text-blue-800 border-blue-200">Manifest V3</span>
@@ -652,7 +691,7 @@
                 </div>
 
                 <!-- System 7: Slack-Native Recruiting Application -->
-                <div class="system-card kx-card p-8 flex flex-col justify-between" data-category="backend">
+                <div class="system-card kx-card p-5 sm:p-8 flex flex-col justify-between" data-category="backend">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
                             <span class="kx-pill font-mono text-[11px] bg-teal-50 text-teal-800 border-teal-200">Slack Bolt SDK</span>
@@ -681,7 +720,7 @@
 
         <!-- Machine Learning Project: Driver Drowsiness Detection -->
         <section class="py-12 reveal-on-scroll">
-            <div class="kx-card p-8 sm:p-10 border border-slate-200">
+            <div class="kx-card p-5 sm:p-8 md:p-10 border border-slate-200">
                 <div class="flex flex-col lg:flex-row gap-8 items-start justify-between">
                     <div class="lg:w-8/12 space-y-4">
                         <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-purple-50 text-purple-700 border border-purple-200 text-xs font-semibold">
@@ -734,18 +773,18 @@
 
             <div class="space-y-8">
                 <!-- Current Full-time Role -->
-                <div class="kx-card p-8 sm:p-10 border-l-4 border-l-black relative">
+                <div class="kx-card p-5 sm:p-8 md:p-10 border-l-4 border-l-black relative">
                     <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-6 border-b border-slate-100 pb-5">
                         <div>
                             <div class="flex items-center space-x-3">
-                                <h3 class="text-2xl font-bold font-display text-slate-950">AI Engineer</h3>
+                                <h3 class="text-xl sm:text-2xl font-bold font-display text-slate-950">AI Engineer</h3>
                                 <span class="kx-lime-pill font-mono text-[11px]">Notice Period Active</span>
                             </div>
                             <p class="text-slate-600 font-semibold text-sm mt-1">
                                 Unnanu AI Technologies India Pvt Ltd &bull; <span class="font-normal text-slate-500">Hyderabad, Telangana</span>
                             </p>
                         </div>
-                        <div class="text-xs font-semibold text-slate-500 bg-slate-100 px-4 py-2 rounded-full self-start md:self-auto">
+                        <div class="text-xs font-semibold text-slate-500 bg-slate-100 px-3.5 py-1.5 rounded-full self-start md:self-auto">
                             1 Year Professional Tenure
                         </div>
                     </div>
@@ -786,7 +825,7 @@
                 <div class="grid md:grid-cols-3 gap-6">
                     
                     <!-- RINL Vizag Steel -->
-                    <div class="kx-card p-7 flex flex-col justify-between">
+                    <div class="kx-card p-5 sm:p-7 flex flex-col justify-between">
                         <div class="space-y-3">
                             <span class="text-xs font-mono font-bold text-slate-400">Dec 2024 &ndash; Mar 2025</span>
                             <h4 class="text-lg font-bold font-display text-slate-950">Project Trainee</h4>
@@ -810,7 +849,7 @@
                     </div>
 
                     <!-- Techno Hacks -->
-                    <div class="kx-card p-7 flex flex-col justify-between">
+                    <div class="kx-card p-5 sm:p-7 flex flex-col justify-between">
                         <div class="space-y-3">
                             <span class="text-xs font-mono font-bold text-slate-400">Nov 2024 &ndash; Dec 2024</span>
                             <h4 class="text-lg font-bold font-display text-slate-950">Web Development Intern</h4>
@@ -834,7 +873,7 @@
                     </div>
 
                     <!-- byteXL -->
-                    <div class="kx-card p-7 flex flex-col justify-between">
+                    <div class="kx-card p-5 sm:p-7 flex flex-col justify-between">
                         <div class="space-y-3">
                             <span class="text-xs font-mono font-bold text-slate-400">May 2024 &ndash; Jun 2024</span>
                             <h4 class="text-lg font-bold font-display text-slate-950">Summer Intern</h4>
@@ -872,12 +911,12 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 
-                <div class="kx-card p-7 space-y-4">
+                <div class="kx-card p-5 sm:p-7 space-y-4">
                     <h3 class="font-display font-bold text-slate-950 text-base flex items-center space-x-2">
                         <i class="fas fa-brain text-slate-700"></i>
                         <span>AI, LLM &amp; Multi-Agent</span>
                     </h3>
-                    <div class="flex flex-wrap gap-2">
+                    <div class="flex flex-wrap gap-1.5 sm:gap-2">
                         <span class="kx-pill">LLM Agent Pipelines</span>
                         <span class="kx-pill">CrewAI</span>
                         <span class="kx-pill">Groq LLM API</span>
@@ -890,12 +929,12 @@
                     </div>
                 </div>
 
-                <div class="kx-card p-7 space-y-4">
+                <div class="kx-card p-5 sm:p-7 space-y-4">
                     <h3 class="font-display font-bold text-slate-950 text-base flex items-center space-x-2">
                         <i class="fas fa-server text-slate-700"></i>
                         <span>Backend &amp; Microservices</span>
                     </h3>
-                    <div class="flex flex-wrap gap-2">
+                    <div class="flex flex-wrap gap-1.5 sm:gap-2">
                         <span class="kx-pill">FastAPI</span>
                         <span class="kx-pill">Python</span>
                         <span class="kx-pill">Node.js</span>
@@ -909,12 +948,12 @@
                     </div>
                 </div>
 
-                <div class="kx-card p-7 space-y-4">
+                <div class="kx-card p-5 sm:p-7 space-y-4">
                     <h3 class="font-display font-bold text-slate-950 text-base flex items-center space-x-2">
                         <i class="fas fa-cloud text-slate-700"></i>
                         <span>Cloud &amp; DevOps</span>
                     </h3>
-                    <div class="flex flex-wrap gap-2">
+                    <div class="flex flex-wrap gap-1.5 sm:gap-2">
                         <span class="kx-pill">Microsoft Azure</span>
                         <span class="kx-pill">Azure Blob Storage</span>
                         <span class="kx-pill">Azure App Service</span>
@@ -925,12 +964,12 @@
                     </div>
                 </div>
 
-                <div class="kx-card p-7 space-y-4">
+                <div class="kx-card p-5 sm:p-7 space-y-4">
                     <h3 class="font-display font-bold text-slate-950 text-base flex items-center space-x-2">
                         <i class="fas fa-database text-slate-700"></i>
                         <span>Data &amp; Document Engines</span>
                     </h3>
-                    <div class="flex flex-wrap gap-2">
+                    <div class="flex flex-wrap gap-1.5 sm:gap-2">
                         <span class="kx-pill">Azure SQL</span>
                         <span class="kx-pill">SQL Indexing</span>
                         <span class="kx-pill">Drizzle ORM</span>
@@ -942,12 +981,12 @@
                     </div>
                 </div>
 
-                <div class="kx-card p-7 space-y-4">
+                <div class="kx-card p-5 sm:p-7 space-y-4">
                     <h3 class="font-display font-bold text-slate-950 text-base flex items-center space-x-2">
                         <i class="fas fa-network-wired text-slate-700"></i>
                         <span>Automation &amp; Integrations</span>
                     </h3>
-                    <div class="flex flex-wrap gap-2">
+                    <div class="flex flex-wrap gap-1.5 sm:gap-2">
                         <span class="kx-pill">n8n Orchestration</span>
                         <span class="kx-pill">LinkedIn API</span>
                         <span class="kx-pill">Fireflies.ai API</span>
@@ -958,12 +997,12 @@
                     </div>
                 </div>
 
-                <div class="kx-card p-7 space-y-4">
+                <div class="kx-card p-5 sm:p-7 space-y-4">
                     <h3 class="font-display font-bold text-slate-950 text-base flex items-center space-x-2">
                         <i class="fas fa-desktop text-slate-700"></i>
                         <span>Frontend &amp; Testing</span>
                     </h3>
-                    <div class="flex flex-wrap gap-2">
+                    <div class="flex flex-wrap gap-1.5 sm:gap-2">
                         <span class="kx-pill">React</span>
                         <span class="kx-pill">TypeScript</span>
                         <span class="kx-pill">JavaScript</span>
@@ -981,31 +1020,31 @@
 
         <!-- Education & Verified Certifications -->
         <section id="education" class="py-16 reveal-on-scroll">
-            <div class="grid lg:grid-cols-2 gap-12">
+            <div class="grid lg:grid-cols-2 gap-8 sm:gap-12">
                 
                 <!-- Education Track -->
                 <div class="space-y-6">
                     <div>
                         <span class="text-xs font-mono font-bold uppercase tracking-widest text-slate-400 block mb-2">Academics</span>
-                        <h2 class="text-3xl font-extrabold font-display text-slate-950">Education</h2>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold font-display text-slate-950">Education</h2>
                     </div>
 
-                    <div class="kx-card p-6 border-l-4 border-l-black space-y-2">
+                    <div class="kx-card p-5 sm:p-6 border-l-4 border-l-black space-y-2">
                         <span class="text-xs font-mono font-bold text-slate-400">Aug 2021 &ndash; May 2025</span>
-                        <h3 class="text-lg font-bold font-display text-slate-950">B.Tech in Computer Science &amp; Engineering (Artificial Intelligence)</h3>
-                        <p class="text-sm font-semibold text-slate-700">Parul University &bull; Vadodara, Gujarat</p>
+                        <h3 class="text-base sm:text-lg font-bold font-display text-slate-950">B.Tech in Computer Science &amp; Engineering (Artificial Intelligence)</h3>
+                        <p class="text-xs sm:text-sm font-semibold text-slate-700">Parul University &bull; Vadodara, Gujarat</p>
                     </div>
 
-                    <div class="kx-card p-6 border-l-4 border-l-slate-300 space-y-2">
+                    <div class="kx-card p-5 sm:p-6 border-l-4 border-l-slate-300 space-y-2">
                         <span class="text-xs font-mono font-bold text-slate-400">Apr 2019 &ndash; Apr 2021</span>
-                        <h3 class="text-base font-bold font-display text-slate-950">Intermediate (12th)</h3>
-                        <p class="text-sm text-slate-600">Vidhyanidhi Junior College &bull; Amalapuram, AP</p>
+                        <h3 class="text-sm sm:text-base font-bold font-display text-slate-950">Intermediate (12th)</h3>
+                        <p class="text-xs sm:text-sm text-slate-600">Vidhyanidhi Junior College &bull; Amalapuram, AP</p>
                     </div>
 
-                    <div class="kx-card p-6 border-l-4 border-l-slate-300 space-y-2">
+                    <div class="kx-card p-5 sm:p-6 border-l-4 border-l-slate-300 space-y-2">
                         <span class="text-xs font-mono font-bold text-slate-400">Apr 2018 &ndash; Apr 2019</span>
-                        <h3 class="text-base font-bold font-display text-slate-950">SSC (10th)</h3>
-                        <p class="text-sm text-slate-600">Z.P.P Boys High School &bull; Amalapuram, AP</p>
+                        <h3 class="text-sm sm:text-base font-bold font-display text-slate-950">SSC (10th)</h3>
+                        <p class="text-xs sm:text-sm text-slate-600">Z.P.P Boys High School &bull; Amalapuram, AP</p>
                     </div>
                 </div>
 
@@ -1013,48 +1052,48 @@
                 <div class="space-y-6">
                     <div>
                         <span class="text-xs font-mono font-bold uppercase tracking-widest text-slate-400 block mb-2">Credentials</span>
-                        <h2 class="text-3xl font-extrabold font-display text-slate-950">Licenses &amp; Languages</h2>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold font-display text-slate-950">Licenses &amp; Languages</h2>
                     </div>
 
-                    <div class="kx-card p-5 flex items-center justify-between">
+                    <div class="kx-card p-4 sm:p-5 flex items-center justify-between">
                         <div>
-                            <h4 class="font-bold text-slate-900 text-sm">Data Science Certification</h4>
-                            <p class="text-xs text-slate-500 mt-0.5">Skill India &bull; Reliance Foundation</p>
+                            <h4 class="font-bold text-slate-900 text-xs sm:text-sm">Data Science Certification</h4>
+                            <p class="text-[11px] sm:text-xs text-slate-500 mt-0.5">Skill India &bull; Reliance Foundation</p>
                         </div>
                         <span class="kx-lime-pill text-xs">Verified</span>
                     </div>
 
-                    <div class="kx-card p-5 flex items-center justify-between">
+                    <div class="kx-card p-4 sm:p-5 flex items-center justify-between">
                         <div>
-                            <h4 class="font-bold text-slate-900 text-sm">Machine Learning with Python</h4>
-                            <p class="text-xs text-slate-500 mt-0.5">Infosys Springboard</p>
+                            <h4 class="font-bold text-slate-900 text-xs sm:text-sm">Machine Learning with Python</h4>
+                            <p class="text-[11px] sm:text-xs text-slate-500 mt-0.5">Infosys Springboard</p>
                         </div>
                         <span class="kx-lime-pill text-xs">Verified</span>
                     </div>
 
-                    <div class="kx-card p-5 flex items-center justify-between">
+                    <div class="kx-card p-4 sm:p-5 flex items-center justify-between">
                         <div>
-                            <h4 class="font-bold text-slate-900 text-sm">Networking Essentials</h4>
-                            <p class="text-xs text-slate-500 mt-0.5">Cisco</p>
+                            <h4 class="font-bold text-slate-900 text-xs sm:text-sm">Networking Essentials</h4>
+                            <p class="text-[11px] sm:text-xs text-slate-500 mt-0.5">Cisco</p>
                         </div>
                         <span class="kx-lime-pill text-xs">Verified</span>
                     </div>
 
                     <!-- Languages -->
-                    <div class="kx-card p-6">
-                        <span class="text-xs font-mono font-bold uppercase tracking-wider text-slate-400 block mb-4">Languages Spoken</span>
-                        <div class="grid grid-cols-3 gap-3 text-center">
-                            <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
-                                <div class="font-bold text-slate-900 text-sm">English</div>
-                                <div class="text-[11px] text-slate-500 mt-0.5">Professional</div>
+                    <div class="kx-card p-5 sm:p-6">
+                        <span class="text-xs font-mono font-bold uppercase tracking-wider text-slate-400 block mb-3 sm:mb-4">Languages Spoken</span>
+                        <div class="grid grid-cols-3 gap-2 sm:gap-3 text-center">
+                            <div class="bg-slate-50 p-2.5 sm:p-3 rounded-xl border border-slate-100">
+                                <div class="font-bold text-slate-900 text-xs sm:text-sm">English</div>
+                                <div class="text-[10px] sm:text-[11px] text-slate-500 mt-0.5">Professional</div>
                             </div>
-                            <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
-                                <div class="font-bold text-slate-900 text-sm">Telugu</div>
-                                <div class="text-[11px] text-slate-500 mt-0.5">Native</div>
+                            <div class="bg-slate-50 p-2.5 sm:p-3 rounded-xl border border-slate-100">
+                                <div class="font-bold text-slate-900 text-xs sm:text-sm">Telugu</div>
+                                <div class="text-[10px] sm:text-[11px] text-slate-500 mt-0.5">Native</div>
                             </div>
-                            <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
-                                <div class="font-bold text-slate-900 text-sm">Hindi</div>
-                                <div class="text-[11px] text-slate-500 mt-0.5">Fluent</div>
+                            <div class="bg-slate-50 p-2.5 sm:p-3 rounded-xl border border-slate-100">
+                                <div class="font-bold text-slate-900 text-xs sm:text-sm">Hindi</div>
+                                <div class="text-[10px] sm:text-[11px] text-slate-500 mt-0.5">Fluent</div>
                             </div>
                         </div>
                     </div>
@@ -1065,29 +1104,29 @@
         </section>
 
         <!-- Final CTA: Bold Karvynox Closing Card with Floating Ambient Glows -->
-        <section class="py-16 reveal-on-scroll">
-            <div class="kx-card p-10 sm:p-16 bg-black text-white text-center rounded-[2.5rem] relative overflow-hidden border-none shadow-2xl">
+        <section class="py-12 sm:py-16 reveal-on-scroll">
+            <div class="kx-card p-6 sm:p-12 md:p-16 bg-black text-white text-center rounded-3xl sm:rounded-[2.5rem] relative overflow-hidden border-none shadow-2xl">
                 
                 <!-- Background decorative glow inside dark card -->
                 <div class="absolute -top-24 -left-24 w-72 h-72 bg-[#b8f022] opacity-20 rounded-full blur-3xl pointer-events-none animate-pulse-glow"></div>
                 <div class="absolute -bottom-24 -right-24 w-72 h-72 bg-sky-400 opacity-20 rounded-full blur-3xl pointer-events-none animate-float-soft"></div>
 
-                <div class="relative z-10 max-w-3xl mx-auto space-y-6">
-                    <span class="inline-block px-4 py-1.5 rounded-full text-xs font-mono font-bold bg-white/10 text-[#b8f022] border border-white/10">
+                <div class="relative z-10 max-w-3xl mx-auto space-y-5 sm:space-y-6">
+                    <span class="inline-block px-3.5 sm:px-4 py-1.5 rounded-full text-[11px] sm:text-xs font-mono font-bold bg-white/10 text-[#b8f022] border border-white/10">
                         Notice Period Active &bull; Ready to Deploy Immediately
                     </span>
-                    <h2 class="text-3xl sm:text-5xl font-extrabold font-display tracking-tight leading-tight">
+                    <h2 class="text-2xl sm:text-4xl md:text-5xl font-extrabold font-display tracking-tight leading-tight">
                         Ready to automate and scale your AI engineering?
                     </h2>
-                    <p class="text-slate-400 text-base sm:text-lg max-w-xl mx-auto">
+                    <p class="text-slate-400 text-sm sm:text-lg max-w-xl mx-auto">
                         Whether you are building LLM agent pipelines, automated intelligence workflows, or cloud microservices &mdash; let's talk.
                     </p>
-                    <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
-                        <button onclick="openConnectModal()" class="btn-shimmer px-8 py-4 rounded-full font-bold text-sm bg-[#b8f022] hover:bg-[#a6de15] text-black transition-all shadow-lg hover:scale-105 flex items-center space-x-2 cursor-pointer">
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 pt-3 sm:pt-4">
+                        <button onclick="openConnectModal()" class="btn-shimmer w-full sm:w-auto px-7 sm:px-8 py-3.5 sm:py-4 rounded-full font-bold text-sm bg-[#b8f022] hover:bg-[#a6de15] text-black transition-all shadow-lg hover:scale-105 flex items-center justify-center space-x-2 cursor-pointer">
                             <i class="fas fa-paper-plane"></i>
                             <span>Let's Connect via Email</span>
                         </button>
-                        <a href="tel:+918463990472" class="px-7 py-4 rounded-full font-bold text-sm bg-white/10 hover:bg-white/20 text-white border border-white/15 transition-all hover:scale-105 flex items-center space-x-2">
+                        <a href="tel:+918463990472" class="w-full sm:w-auto px-6 sm:px-7 py-3.5 sm:py-4 rounded-full font-bold text-sm bg-white/10 hover:bg-white/20 text-white border border-white/15 transition-all hover:scale-105 flex items-center justify-center space-x-2">
                             <i class="fas fa-phone-alt"></i>
                             <span>+91-8463990472</span>
                         </a>
@@ -1167,30 +1206,32 @@ I would love to connect regarding an AI Engineer opportunity / project discussio
     </div>
 
     <!-- Interactive Resume Reviewer Modal -->
-    <div id="resume-modal" class="fixed inset-0 z-[130] hidden items-center justify-center p-2 sm:p-4 md:p-6 bg-slate-950/75 backdrop-blur-md transition-opacity duration-300">
-        <div class="kx-card max-w-5xl w-full h-[94vh] flex flex-col bg-white border border-slate-200 shadow-2xl overflow-hidden relative" onclick="event.stopPropagation()">
+    <div id="resume-modal" class="fixed inset-0 z-[130] hidden items-center justify-center p-1 sm:p-4 md:p-6 bg-slate-950/75 backdrop-blur-md transition-opacity duration-300">
+        <div class="kx-card max-w-5xl w-full h-[96vh] sm:h-[94vh] flex flex-col bg-white border border-slate-200 shadow-2xl overflow-hidden relative" onclick="event.stopPropagation()">
             
             <!-- Modal Header -->
-            <div class="px-4 py-3 sm:px-6 sm:py-4 border-b border-slate-200/80 bg-white flex items-center justify-between gap-3 shrink-0">
-                <div class="flex items-center space-x-3">
-                    <div class="w-10 h-10 rounded-2xl bg-[#f4fdcf] border border-[#d9f99d] flex items-center justify-center text-[#3f6212] font-bold shrink-0">
-                        <i class="fas fa-file-invoice text-lg"></i>
+            <div class="px-3 py-2.5 sm:px-6 sm:py-4 border-b border-slate-200/80 bg-white flex items-center justify-between gap-2 sm:gap-3 shrink-0">
+                <div class="flex items-center space-x-2 sm:space-x-3 min-w-0">
+                    <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-xl sm:rounded-2xl bg-[#f4fdcf] border border-[#d9f99d] flex items-center justify-center text-[#3f6212] font-bold shrink-0">
+                        <i class="fas fa-file-invoice text-sm sm:text-lg"></i>
                     </div>
-                    <div>
-                        <div class="flex items-center space-x-2">
-                            <h3 class="text-base sm:text-lg font-bold font-display text-slate-950 leading-tight">Bandaru Jnana Siva Sai Ganeswar — Resume</h3>
+                    <div class="min-w-0">
+                        <div class="flex items-center space-x-1.5 sm:space-x-2">
+                            <h3 class="text-xs sm:text-base md:text-lg font-bold font-display text-slate-950 leading-tight truncate">
+                                Sai Ganeswar &mdash; Resume
+                            </h3>
                             <span class="hidden sm:inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-[#f4fdcf] text-[#3f6212]">Verified AI Engineer</span>
                         </div>
-                        <p class="text-[11px] sm:text-xs text-slate-500 mt-0.5">
+                        <p class="text-[10px] sm:text-xs text-slate-500 mt-0.5 truncate hidden sm:block">
                             1 Year Production AI &bull; Unnanu AI &bull; Agentic Workflows &bull; FastAPI &bull; Hybrid RAG
                         </p>
                     </div>
                 </div>
 
                 <!-- Action Tools -->
-                <div class="flex items-center space-x-2">
+                <div class="flex items-center space-x-1.5 sm:space-x-2 shrink-0">
                     <!-- Zoom Controls -->
-                    <div class="hidden sm:flex items-center bg-slate-100 rounded-xl p-1 border border-slate-200/70 text-xs text-slate-600 font-semibold space-x-1">
+                    <div class="hidden md:flex items-center bg-slate-100 rounded-xl p-1 border border-slate-200/70 text-xs text-slate-600 font-semibold space-x-1">
                         <button onclick="changeResumeZoom(-0.15)" class="px-2 py-1 hover:bg-white rounded-lg transition-colors cursor-pointer" title="Zoom Out">
                             <i class="fas fa-search-minus"></i>
                         </button>
@@ -1201,22 +1242,23 @@ I would love to connect regarding an AI Engineer opportunity / project discussio
                         <button onclick="resetResumeZoom()" class="px-2 py-1 hover:bg-white rounded-lg transition-colors text-[10px] cursor-pointer" title="Reset Fit">Fit</button>
                     </div>
 
-                    <a href="resume.pdf" download="Bandaru_Jnana_Siva_Sai_Ganeswar_AI_Engineer_Resume.pdf" class="btn-shimmer px-3 sm:px-4 py-2 rounded-xl text-xs font-bold bg-black text-white hover:bg-slate-800 transition-all flex items-center space-x-1.5 shadow-sm" title="Download Resume PDF">
+                    <a href="resume.pdf" download="Bandaru_Jnana_Siva_Sai_Ganeswar_AI_Engineer_Resume.pdf" class="btn-shimmer px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-xl text-xs font-bold bg-black text-white hover:bg-slate-800 transition-all flex items-center space-x-1 sm:space-x-1.5 shadow-sm" title="Download Resume PDF">
                         <i class="fas fa-download text-xs"></i>
-                        <span>Download PDF</span>
+                        <span class="hidden sm:inline">Download PDF</span>
+                        <span class="sm:hidden text-[11px]">PDF</span>
                     </a>
                     <a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="hidden md:flex px-3 py-2 rounded-xl text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all items-center space-x-1.5" title="Open in New Tab">
                         <i class="fas fa-external-link-alt text-xs"></i>
                         <span>Open Tab</span>
                     </a>
-                    <button onclick="closeResumeModal()" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-800 flex items-center justify-center transition-all cursor-pointer" title="Close">
+                    <button onclick="closeResumeModal()" class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-800 flex items-center justify-center transition-all cursor-pointer" title="Close">
                         <i class="fas fa-times text-xs"></i>
                     </button>
                 </div>
             </div>
 
-            <!-- Quick Highlight Strip -->
-            <div class="px-5 py-2 bg-slate-50 border-b border-slate-200/60 flex flex-wrap items-center justify-between gap-2 text-[11px] font-semibold text-slate-600 shrink-0">
+            <!-- Quick Highlight Strip (Hidden on small mobile to maximize space) -->
+            <div class="hidden sm:flex px-5 py-2 bg-slate-50 border-b border-slate-200/60 flex-wrap items-center justify-between gap-2 text-[11px] font-semibold text-slate-600 shrink-0">
                 <div class="flex flex-wrap items-center gap-2">
                     <span class="px-2.5 py-0.5 rounded-full bg-white border border-slate-200 text-slate-700">⚡ CrewAI &amp; LangChain</span>
                     <span class="px-2.5 py-0.5 rounded-full bg-white border border-slate-200 text-slate-700">⚡ Hybrid RAG &amp; Azure AI Search</span>
@@ -1230,7 +1272,7 @@ I would love to connect regarding an AI Engineer opportunity / project discussio
             </div>
 
             <!-- High-Resolution Crisp Document Viewer -->
-            <div id="resume-scroll-container" class="flex-1 w-full h-full bg-slate-200/60 overflow-y-auto p-3 sm:p-6 flex flex-col items-center select-text">
+            <div id="resume-scroll-container" class="flex-1 w-full h-full bg-slate-200/60 overflow-y-auto p-1.5 sm:p-6 flex flex-col items-center select-text">
                 <!-- Page 1 -->
                 <div class="resume-page-wrapper w-full max-w-3xl mb-6 transition-all duration-200">
                     <div class="flex items-center justify-between text-[11px] font-mono text-slate-500 mb-1.5 px-1">
@@ -1279,12 +1321,16 @@ I would love to connect regarding an AI Engineer opportunity / project discussio
                     (Welcome Card)
                 </button>
             </div>
-            <div class="flex items-center space-x-5 text-slate-600 font-medium">
+            <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-5 text-slate-600 font-medium">
                 <button onclick="openResumeModal()" class="hover:text-black font-bold text-slate-900 transition-colors flex items-center space-x-1.5 cursor-pointer">
                     <i class="fas fa-file-invoice text-emerald-600"></i>
                     <span>Review Resume</span>
                 </button>
-                <a href="https://linkedin.com/in/bandaru-jnana-siva-saiganeswar" target="_blank" rel="noopener noreferrer" class="hover:text-black transition-colors flex items-center space-x-1.5">
+                <a href="https://github.com/SAIBANDARU414" target="_blank" rel="noopener noreferrer" class="hover:text-black transition-colors flex items-center space-x-1.5" title="GitHub Profile">
+                    <i class="fab fa-github text-base"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://linkedin.com/in/bandaru-jnana-siva-saiganeswar" target="_blank" rel="noopener noreferrer" class="hover:text-black transition-colors flex items-center space-x-1.5" title="LinkedIn Profile">
                     <i class="fab fa-linkedin text-base"></i>
                     <span>LinkedIn</span>
                 </a>
@@ -1305,6 +1351,27 @@ I would love to connect regarding an AI Engineer opportunity / project discussio
 
     <!-- Comprehensive Animation Engine: Cursor Glow, 3D Tilt, Text Cycler, CountUp, Scroll Reveal -->
     <script>
+
+        // 0. Mobile Drawer Menu Controller
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('mobile-menu-icon');
+            if (!menu) return;
+            const isHidden = menu.classList.contains('hidden');
+            if (isHidden) {
+                menu.classList.remove('hidden');
+                if (icon) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                }
+            } else {
+                menu.classList.add('hidden');
+                if (icon) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            }
+        }
 
         // 2. Dynamic Hero Word Cycler
         const heroWords = [

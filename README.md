@@ -14,3 +14,9 @@ Open `index.html` in any modern web browser or deploy directly to GitHub Pages.
 - **Architecture**: Modern HTML5, Vanilla JavaScript, Tailwind CSS
 - **Typography & Icons**: Space Grotesk, Plus Jakarta Sans, Font Awesome
 - **Assets**: Embedded high-resolution resume viewer and PDF download
+
+## Connect & Links
+- **GitHub**: [https://github.com/SAIBANDARU414](https://github.com/SAIBANDARU414)
+- **LinkedIn**: [https://linkedin.com/in/bandaru-jnana-siva-saiganeswar](https://linkedin.com/in/bandaru-jnana-siva-saiganeswar)
+- **Email**: bandarujnanasivasaiganeswar@gmail.com
+- **Phone**: +91-8463990472
